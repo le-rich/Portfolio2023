@@ -133,7 +133,7 @@ module.exports = env => {
 
     plugins: plugins.concat(
       new HtmlWebpackPlugin({
-        title: 'Three.js Webpack ES6 Boilerplate',
+        title: 'Richard Le - Creative Developer',
         template: path.join(__dirname, 'src/html/index.html'),
         filename: '../index.html',
         env: env.NODE_ENV,

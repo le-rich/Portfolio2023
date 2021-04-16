@@ -2,6 +2,12 @@ import Config from './data/config';
 import Detector from './utils/detector';
 import Main from './app/main';
 
+import * as THREE from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import * as dat from 'dat.gui'
+
+import gsap from 'gsap'
+
 // Styles
 import './../css/app.scss';
 
@@ -17,8 +23,11 @@ function init() {
   if(!Detector.webgl) {
     Detector.addGetWebGLMessage();
   } else {
-    const container = document.getElementById('appContainer');
-    new Main(container);
+    // Old
+    // const container = document.getElementById('webgl');
+    // new Main(container);
+
+
   }
 }
 

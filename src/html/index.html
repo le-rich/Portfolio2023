@@ -2,13 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.4/tailwind.min.css"
+    integrity="sha512-paVHVRRhdoOu1nOXKnqDC1Vka0nh7FAmU3nsM4n2FKxOQTeF6crMdMfkVvEsuaOXZ6oEAVL5+wLbQcule/Xdag=="
+    crossorigin="anonymous" />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
 
   <body>
-    <section id="appContainer" class="main">
-      <div id="loading">Loading...</div>
+    <section id="webgl" class="main">
+
     </section>
+    <div class="htmlContainer">
+      <section id="socials">
+        <div>
+          <h1> This is in the socials section</h1>
+        </div>
+      </section>
+    </div>
+
 
     <% if (htmlWebpackPlugin.options.env === 'dev') { %>
     <script src="js/rStats.js"></script>

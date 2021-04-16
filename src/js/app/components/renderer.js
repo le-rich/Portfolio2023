@@ -17,7 +17,7 @@ export default class Renderer {
     this.threeRenderer.setPixelRatio(window.devicePixelRatio); // For retina
 
     // Appends canvas
-    container.appendChild(this.threeRenderer.domElement);
+    container.insertBefore(this.threeRenderer.domElement, container.firstChild);
 
     // Shadow map options
     this.threeRenderer.shadowMap.enabled = true;

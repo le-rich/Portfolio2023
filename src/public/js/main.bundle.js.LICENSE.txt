@@ -1,5 +1,7 @@
 /*! ../../data/config */
 
+/*! ../../node_modules/dat.gui */
+
 /*! ../../utils/bufferGeometryUtils */
 
 /*! ../../utils/helpers */
