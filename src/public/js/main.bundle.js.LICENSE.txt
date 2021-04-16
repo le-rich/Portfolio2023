@@ -1,7 +1,5 @@
 /*! ../../data/config */
 
-/*! ../../node_modules/dat.gui */
-
 /*! ../../utils/bufferGeometryUtils */
 
 /*! ../../utils/helpers */
@@ -52,9 +50,13 @@
 
 /*! @tweenjs/tween.js */
 
+/*! dat.gui */
+
 /*! es6-promise */
 
 /*! three */
+
+/*! three/examples/jsm/controls/OrbitControls.js */
 
 /*!***********************!*\
   !*** ./src/js/app.js ***!

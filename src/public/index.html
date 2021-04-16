@@ -10,29 +10,37 @@
 
   <body>
     <div id="appContainer" class="w-screen h-screen">
-      <div id="htmlContainer" class="w-max grid grid-rows-3 grid-flow-row p-4">
-        <section class="mr-auto align-middle items-center">
+      <canvas class="webgl"></canvas>
+      <div id="htmlContainer" class="w-full grid grid-rows-3 grid-flow-row p-4">
+        <div class="mr-auto align-middle items-center">
           <div class="m-28 space-x-2">
-            <i class="fab fa-2x hover:fa-3x fa-github"></i>
-            <i class="fab fa-2x hover:fa-3x fa-linkedin"></i>
-            <i class="fas fa-2x hover:fa-3x fa-envelope-square"></i>
+            <a href="https://github.com/le-rich">
+              <i class="fab fa-2x fa-github transition duration-100 ease-in-out transform hover:scale-105 cursor-pointer"></i>
+            </a>
+            <a href="https://linkedin.com/in/le-rich">
+              <i class="fab fa-2x fa-linkedin transition duration-100 ease-in-out transform hover:scale-105 cursor-pointer"></i>
+            </a>
+            <a>
+              <i class="fas fa-2x fa-envelope-square transition duration-100 ease-in-out transform hover:scale-105 cursor-pointer"></i>
+            </a>
           </div>
-        </section>
-        <section class="h-100">
+        </div>
+        <div class="h-100 flex justify-center items-center">
           <div class="text-center">
             <h1 class="text-9xl font-medium">richard le</h1>
             <h5 class="text-4xl font-extralight">creative software developer</h5>
           </div>
-        </section>
-        <section class="h-100">
+        </div>
+        <div class="h-100">
           <div class="flex w-1/2 h-full text-center m-auto space-x-5 font-light items-center justify-center">
             <div>Work</div>
             <div>Skills</div>
             <div>About</div>
           </div>
-        </section>
+        </div>
       </div>
-    </section>
+    </div>
+
 
     
     <script src="js/rStats.js"></script>
