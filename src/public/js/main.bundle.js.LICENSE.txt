@@ -16,6 +16,8 @@
 
 /*! ./../data/config */
 
+/*! ./app/loaders/GLTFLoader */
+
 /*! ./app/main */
 
 /*! ./components/camera */
@@ -53,6 +55,8 @@
 /*! dat.gui */
 
 /*! es6-promise */
+
+/*! gsap */
 
 /*! three */
 

@@ -113,7 +113,7 @@ module.exports = env => {
       ],
 
       // extensions that are used
-      extensions: ['.js', '.json'],
+      extensions: ['.js', '.json', '.html'],
     },
 
     performance: {
