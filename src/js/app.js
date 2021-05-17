@@ -168,11 +168,11 @@ function init() {
     //   })
     // )
 
-    // const gridHelper = new THREE.GridHelper( 11, 10,  "#f104a5", "#f104a5");
-    // gridHelper.material.opacity = 0.1;
-    // gridHelper.position.z = -5;
-    // gridHelper.rotation.x = Math.PI / 2;
-    // scene.add( gridHelper );
+    const gridHelper = new THREE.GridHelper( 11, 10,  "#f104a5", "#f104a5");
+    gridHelper.material.opacity = 0.1;
+    gridHelper.position.z = -5;
+    gridHelper.rotation.x = Math.PI / 2;
+    scene.add( gridHelper );
 
 
     // const object1 = new THREE.Mesh(
