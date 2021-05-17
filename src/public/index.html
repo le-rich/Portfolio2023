@@ -13,16 +13,29 @@
     <div id="appContainer" class="w-screen h-screen">
       <canvas class="webgl"></canvas>
       <div class="loading-bar"></div>
+      <!-- <div id="loadingLabel">
+        <span class="title-font">
+          LOADING
+        </span>
+      </div> -->
+      <div class="cursor"></div>
       <div id="htmlContainer" class="hidden w-full grid grid-rows-3 grid-flow-row p-4">
         <div class="mr-auto align-middle items-center">
-          <div class="m-28 reveal-wrapper">
-            <div class=" space-x-5 reveal-line">
-              <a href="https://github.com/le-rich">
-                <i class="fab fa-2x fa-github transition duration-100 ease-in-out transform hover:scale-105 cursor-pointer"></i>
-              </a>
-              <a href="https://linkedin.com/in/le-rich">
-                <i class="fab fa-2x fa-linkedin transition duration-100 ease-in-out transform hover:scale-105 cursor-pointer"></i>
-              </a>
+          <div class="m-28 ">
+            <div class="reveal-line">
+              <nav class="space-x-5">
+                <a class="hover-this" href="https://github.com/le-rich">
+                  <span>
+                    <i class="fab fa-2x fa-github transition duration-100 ease-in-out transform hover:scale-105 cursor-pointer"></i>
+                  </span>
+                </a>
+                <a class="hover-this" href="https://linkedin.com/in/le-rich">
+                  <span>
+                    <i class="fab fa-2x fa-linkedin transition duration-100 ease-in-out transform hover:scale-105 cursor-pointer"></i>
+                  </span>
+                </a>
+              </nav>
+
             </div>
             <!-- <a>
               <i class="fas fa-2x fa-envelope-square transition duration-100 ease-in-out transform hover:scale-105 cursor-pointer"></i>
@@ -30,7 +43,7 @@
           </div>
         </div>
         <div class="h-100 flex justify-left items-left">
-          <div class="m-28 reveal-wrapper">
+          <div class="m-28">
             <div class="reveal-line">
               <h1 class="text-9xl font-extrabold title-font">RICHARD LE</h1>
             </div>
@@ -39,21 +52,20 @@
             </div>
           </div>
         </div>
-        <div class="h-100">
-          <div class="ml-28 flex w-1/2 h-full text-left  title-font reveal-wrapper">
-            <div class="reveal-line">
-              <div class="reveal-line space-x-20">
-                <a class="title-font" href="">
-                  WORK
+        <div>
+          <div class="ml-28 flex w-1/2 h-full text-left  title-font">
+            <div class="reveal-line nav-wrapper">
+              <nav class="space-x-20">
+                <a class="hover-this" href="#">
+                  <span class="title-font text-2xl">WORK</span>
                 </a>
-                <a class="title-font" href="">
-                  SKILLS
+                <a class="title-font hover-this" href="#">
+                  <span class="title-font text-2xl">SKILLS</span>
                 </a>
-                <a class="title-font">
-                  ABOUT
+                <a class="title-font hover-this" href="#">
+                  <span class="title-font text-2xl">ABOUT</span>
                 </a>
-              </div>
-
+              </nav>
             </div>
           </div>
         </div>
