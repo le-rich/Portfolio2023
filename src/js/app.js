@@ -50,8 +50,8 @@ function init() {
             gsap.to(overlayMaterial.uniforms.uAlpha, { duration: 3, value: 0, delay: 1 })
             loadingBarElement.classList.add('ended')
             loadingBarElement.style.transform = ''
-            let htmlContainer = document.getElementById("htmlContainer");
-            htmlContainer.classList.remove("hidden");
+            let landingContainer = document.getElementById("landingContainer");
+            landingContainer.classList.remove("hidden");
         }, 500)
 
           const textrev = gsap.timeline();
@@ -240,18 +240,7 @@ function init() {
         cursor.classList.add('cursor-expand');
     }
 
-    const editCursor = e => {
-      const {
-        clientX: x,
-        clientY: y
-      } = e;
-      cursor.style.left = x + 'px';
-      cursor.style.top = y + 'px';
-    };
 
-    link.forEach(b => b.addEventListener('mousemove', animateit));
-    link.forEach(b => b.addEventListener('mouseleave', animateit));
-    window.addEventListener('mousemove', editCursor);
 
     /**
      * Sizes
@@ -280,9 +269,14 @@ function init() {
      */
     const mouse = new THREE.Vector2()
 
+    link.forEach(b => b.addEventListener('mousemove', animateit));
+    link.forEach(b => b.addEventListener('mouseleave', animateit));
+
     window.addEventListener('mousemove', (event) => {
       mouse.x = event.clientX / sizes.width * 2 - 1
       mouse.y = -(event.clientY / sizes.height) * 2 + 1
+      cursor.style.left = event.x + 'px';
+      cursor.style.top = event.y + 'px';
     })
 
     window.addEventListener('click', () => {
