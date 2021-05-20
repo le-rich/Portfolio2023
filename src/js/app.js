@@ -368,3 +368,11 @@ function init() {
 }
 
 init();
+
+// With options
+let b = baffle('#projectHeadingTitle', {
+  characters: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()-+=[]{}|;:,./<>?▓█░',
+});
+
+b.start()
+b.reveal(5000)
