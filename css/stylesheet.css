@@ -1,8 +1,9 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: 'Futura PT', sans-serif;
+    font-family: 'Space Mono', monospace;
     /* font-family: 'Neue Helvetica', sans-serif; */
+    scroll-behavior: smooth;
     background-color: #f3f3f5;
 }
 
@@ -16,4 +17,12 @@ html, body {
 
 .font-receipt{
     font-family: 'Fake Receipt', sans-serif;
+}
+
+.cursorCenter{
+
+}
+
+.cursorLerp{
+
 }
