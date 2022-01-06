@@ -22,10 +22,10 @@ $(window).on('mousemove', moveCursors);
 
 $("#info-circle").mouseenter(function(){
   console.log("hidden")
-  $("#infotainer").removeClass("hidden");
+  $("#infotainer").fadeIn();
 });
 
 $("#info-circle").mouseleave(function(){
   console.log("visible")
-  $("#infotainer").addClass("hidden");
+  $("#infotainer").fadeOut();
 });
