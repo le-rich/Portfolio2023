@@ -1,4 +1,5 @@
-import * as THREE from 'https://cdn.skypack.dev/pin/three@v0.136.0-4Px7Kx1INqCFBN0tXUQc/mode=imports,min/optimized/three.js';
+import * as THREE from 'https://cdn.skypack.dev/-/three-full@v28.0.2-vXctAfDjnTFinuDDLbIh/dist=es2019,mode=imports/optimized/three-full.js'
+import { OBJLoader } from 'https://cdn.skypack.dev/-/three-full@v28.0.2-vXctAfDjnTFinuDDLbIh/dist=es2019,mode=imports/optimized/three-full.js'
 /**
  * Base
  */
@@ -10,10 +11,18 @@ const scene = new THREE.Scene()
 /**
  * Loaders
  */
-const loader = new THREE.OBJLoader();
+const loader = new OBJLoader();
+let daggerGroup = new THREE.Group()
+let daggerMesh = null;
 loader.load(
     '../assets/3d/dagger.obj',
     function (object){
+        console.log(object)
+        object.rotation.x = Math.PI / 2
+        object.children[0].scale.set(12,12,12)
+        object.position.set(2,0, -0.5)
+        daggerMesh = object.children[0];
+        daggerGroup = object
         scene.add(object);
     },
     // called when loading is in progresses
@@ -36,7 +45,7 @@ loader.load(
 const geometry = new THREE.BoxGeometry(1, 1, 1)
 const material = new THREE.MeshBasicMaterial({ color: 0xff0000 })
 const mesh = new THREE.Mesh(geometry, material)
-scene.add(mesh)
+//scene.add(mesh)
 
 /**
  * Sizes
@@ -122,8 +131,10 @@ const tick = () =>
 
     // Render
     renderer.render(scene, camera)
-    mesh.rotation.y = elapsedTime;
-    mesh.rotation.x = elapsedTime;
+    daggerGroup.rotation.z = elapsedTime;
+    daggerGroup.position.y = (Math.sin(elapsedTime) / 3) + 0.5
+    //daggerGroup.rotation.y = elapsedTime;
+    //daggerGroup.rotation.x = elapsedTime;
     // Call tick again on the next frame
     window.requestAnimationFrame(tick)
 }
