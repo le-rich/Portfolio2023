@@ -1,5 +1,19 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-family: 'Futura PT', sans-serif;
+    /* font-family: 'Neue Helvetica', sans-serif; */
+    background-color: #f3f3f5;
+}
+
+.font-monument {
+    font-family: 'Monument Extended';
+}
+
+.font-bodoni {
+    font-family: 'Bodoni Std';
+}
+
+.font-receipt{
     font-family: 'Fake Receipt', sans-serif;
 }
