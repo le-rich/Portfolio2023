@@ -1,9 +1,17 @@
 // http://ahrengot.com/tutorials/greensock-javascript-animation
 
-var $circle = $('.cursor');
+var $cursorLerp = $('.cursorLerp');
+var $cursor = $('.cursor');
 
-function moveCircle(e) {
-	TweenLite.to($circle, 0.3, {
+function moveCursors(e) {
+	TweenLite.to($cursorLerp, 0.2, {
+    css: {
+      left: e.pageX,
+      top: e.pageY
+    }
+  });
+  
+  TweenLite.to($cursor, 0.3, {
     css: {
       left: e.pageX,
       top: e.pageY
@@ -11,4 +19,4 @@ function moveCircle(e) {
   });
 }
 
-$(window).on('mousemove', moveCircle);
+$(window).on('mousemove', moveCursors);

@@ -18,6 +18,7 @@
     <title>Richard Le - Software Developer</title>
 </head>
 <body>
+    <canvas class="webgl -z-50"></canvas>
     <header class="fixed w-full mt-5 h-16 font-receipt">
         <nav class="flex flex-row items-center justify-between mx-14 text-2xl">
             <a class="p-5">RL</a>
@@ -50,12 +51,12 @@
             <ul class="flex flex-row">
                 <li>
                     <a class="px-2">
-                        <i class="fab fa-2x fa-github-square"></i>
+                        <i class="fab fa-2x fa-inverse fa-github"></i>
                     </a>
                 </li>
                 <li>
                     <a class="px-2">
-                        <i class="fab fa-2x fa-linkedin"></i>
+                        <i class="fab fa-2x fa-inverse fa-linkedin-in"></i>
                     </a>
                 </li>
             </ul>         
@@ -63,31 +64,43 @@
     </header>
     <div class="container flex flex-col pt-20 w-full h-screen mx-24">
         <div class="flex flex-col grow justify-center content-end h-screen h-96">
-            <h1 class="text-2xl font-light">the software developer known as</h1>
-            <h1 class="text-9xl ">richard le</h1>
+            <h1 class="text-2xl font-light">THE SOFTWARE DEVELOPER KNOWN AS</h1>
+            <span class="flex flex-row">
+                <h1 class="text-9xl">richard le</h1>
+                <i class="fas fa-lg fa-info-circle"></i>
+            </span>
+        </div>
+        <div>
+
+        </div>
+
+    </div>
+    <div class="overflow-hidden whitespace-nowrap flex flex-row bg-black text-white mt-5">
+        <div class="scroll-motion">
+            <span class="mx-5 text-9xl">PROJECTS</span>
+            <span class="mx-5 text-9xl">PROJECTS</span>
+            <span class="mx-5 text-9xl">PROJECTS</span>
+            <span class="mx-5 text-9xl">PROJECTS</span>
+            <span class="mx-5 text-9xl">PROJECTS</span>
+            <span class="mx-5 text-9xl">PROJECTS</span>
+            <span class="mx-5 text-9xl">PROJECTS</span>
         </div>
     </div>
-    <div class="overflow-hidden whitespace-nowrap flex flex-row items-center justify-center content-end bg-black text-white my-5">
-        <span class="mx-5 text-9xl">PROJECTS</span>
-        <span class="mx-5 text-9xl">PROJECTS</span>
-        <span class="mx-5 text-9xl">PROJECTS</span>
-        <span class="mx-5 text-9xl">PROJECTS</span>
-        <span class="mx-5 text-9xl">PROJECTS</span>
+    <div id="projects-container" class="bg-black w-full h-screen">
+        <div id="project-inspector" class="w-100 h-100">
+
+        </div>
     </div>
-    <div id="projects-container" class="container flex h-screen mx-24">
+    <div class="cursorLerp">
     </div>
-    <div class="cursor">
-        <svg height="30" width="30">
-            <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
-          </svg>
-    </div>
-    <div id="cusrorLerp">
-        <svg height="10" width="10">
-            <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
-          </svg>
+    <div id="cursor">
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="module">
+    import threeUniversal from 'https://cdn.skypack.dev/three-universal';
+</script>
+<script type="module" src="js/3d.js"></script>
 <script src="js/main.js"></script>
 </html>
