@@ -17,7 +17,6 @@ let daggerMesh = null;
 loader.load(
     '../assets/3d/dagger.obj',
     function (object){
-        console.log(object)
         object.rotation.x = Math.PI / 2
         object.children[0].scale.set(12,12,12)
         object.position.set(2,0, -0.5)
@@ -132,7 +131,7 @@ const tick = () =>
     // Render
     renderer.render(scene, camera)
     daggerGroup.rotation.z = elapsedTime;
-    daggerGroup.position.y = (Math.sin(elapsedTime) / 3) + 0.5
+    daggerGroup.position.y = (Math.sin(elapsedTime) / 4) + 0.6
     //daggerGroup.rotation.y = elapsedTime;
     //daggerGroup.rotation.x = elapsedTime;
     // Call tick again on the next frame
