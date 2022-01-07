@@ -70,37 +70,6 @@ window.addEventListener('resize', () =>
 })
 
 /**
- * Fullscreen
- */
-window.addEventListener('dblclick', () =>
-{
-    const fullscreenElement = document.fullscreenElement || document.webkitFullscreenElement
-
-    if(!fullscreenElement)
-    {
-        if(canvas.requestFullscreen)
-        {
-            canvas.requestFullscreen()
-        }
-        else if(canvas.webkitRequestFullscreen)
-        {
-            canvas.webkitRequestFullscreen()
-        }
-    }
-    else
-    {
-        if(document.exitFullscreen)
-        {
-            document.exitFullscreen()
-        }
-        else if(document.webkitExitFullscreen)
-        {
-            document.webkitExitFullscreen()
-        }
-    }
-})
-
-/**
  * Camera
  */
 // Base camera
@@ -132,8 +101,9 @@ const tick = () =>
     renderer.render(scene, camera)
     daggerGroup.rotation.z = elapsedTime;
     daggerGroup.position.y = (Math.sin(elapsedTime) / 4) + 0.6
-    //daggerGroup.rotation.y = elapsedTime;
-    //daggerGroup.rotation.x = elapsedTime;
+
+
+
     // Call tick again on the next frame
     window.requestAnimationFrame(tick)
 }

@@ -10,6 +10,10 @@ html, body {
     background-color: transparent;
 }
 
+@-ms-viewport{
+    width: device-width;
+}
+
 .font-monument {
     font-family: 'Monument Extended';
 }
@@ -24,10 +28,10 @@ html, body {
 
 /* ANIMATIONS */
 
-.cursorLerp{
+#cursorLerp{
     pointer-events: none;
     position: absolute;
-    padding: 0.5rem;
+    padding: 0.3rem;
     /* background-color: #a3f509; */
     background-color: white;
     border-radius: 50%;
@@ -37,26 +41,14 @@ html, body {
     transform: translate(-50%, -50%);
 }
 
-.cursor {
-    pointer-events: none;
-    position: fixed;
-    padding: 0.3rem;
-    background-color: black;
-    border-radius: 50%;
-    mix-blend-mode: difference;
-    transition: transform 0.3s ease;
-    z-index: 1000;
-    transform: translate(-50%, -50%);
-}
-
 .scroll-motion{
     width: 100%;
-    animation: scroll-motion 5s linear infinite;
+    animation: scroll-motion 25s linear infinite;
 
 }
 
 @keyframes scroll-motion{
-    to {transform: translateX(-105%);}
+    to {transform: translateX(-100%);}
 }
 
 .pulsate-fwd {

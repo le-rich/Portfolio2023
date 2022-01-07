@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -27,27 +27,27 @@
                     <a href="#projects-container" class="p-5">Projects</a>
                 </li>
                 <li>
-                    <a class="p-5">Skillmap</a>
+                    <a href="#skillmap-container" class="p-5">Skillmap</a>
                 </li>
                 <li>
                     <a class="p-5">Contact</a>
                 </li>
             </ul>
         </nav>
-        <div id="colorSwitcher" class="fixed z-40 bottom-0 -right-40 rotate-90 z-40 mb-52 text-lg">
-            <ul class="flex flex-row">
-                <li>
-                    <a class="px-5">LUXE</a>
+        <div id="colorSwitcher" class="fixed z-40 bottom-0 -right-40 rotate-90 z-40 mb-52 text-sm">
+            <ul class="flex flex-row p-4 mix-blend-difference">
+                <li class="opacity-100">
+                    <a class="p-5 mix-blend-difference">LUXE</a>
                 </li>
                 <li>
-                    <a class="px-5">CYBERWARFARE</a>
+                    <a class="p-5 mix-blend-difference">CYBERWARFARE</a>
                 </li>
                 <li>
-                    <a class="px-5 underline underline-offset-4">CLEAN-CUT</a>
+                    <a class="p-5 mix-blend-difference underline underline-offset-4">CLEAN-CUT</a>
                 </li>                
             </ul>
         </div>
-        <div id="socials" class="fixed z-40 mb-5 bottom-0 left-4">
+        <div id="socials" class="fixed z-40 mb-5 bottom-0 ml-5">
             <ul class="p-1 rounded-full bg-black flex flex-row">
                 <li>
                     <a class="px-2">
@@ -64,7 +64,7 @@
     </header>
     <div id="infotainer" class="hidden opacity-95 pointer-events-none bg-black absolute top-0 left-0 w-full h-screen">
         <div class="container flex flex-col m-28 text-white ">
-            <h1 class="text-5xl ">richard /ˈrɪtʃərd/</h1>
+            <h1 class="text-5xl ">richard</h1>
             <ul>
                 <li class="font-receipt text-slate-500">AKA: Dirk, The Jungle Snake</li>
             </ul>
@@ -74,7 +74,7 @@
             </span>
 
 
-            <p class="font-receipt mr-72">
+            <p class="font-receipt mr-96">
                 Richard is a versatile, multi-discipline programmer whose areas of operation range from traditional software development, UI/ UX Design, Game Direction, 3D Art, to Writing and Cinematography.
                 <br>
                 <br>
@@ -84,38 +84,86 @@
             </p>
         </div>
     </div>
-    <div class="container flex flex-col pt-20 w-full h-screen mx-24">
+    <div id="landing" class="container flex flex-col pt-20 w-full h-screen mx-24">
         <div class="flex flex-col grow justify-center content-end h-screen h-96">
             <h1 class="text-2xl font-light">THE SOFTWARE DEVELOPER KNOWN AS</h1>
             <span class="flex flex-row">
-                <h1 class="text-9xl">richard le</h1>
-                    <i id="info-circle" class="pulsate-fwd p-2 fas fa-lg fa-info-circle"></i>
+                <h1 class="text-9xl ">richard le</h1>
+                <i id="richard-info-circle" class="h-12 pulsate-fwd fas fa-2x fa-info-circle"></i>
             </span>
+           
         </div>
     </div>
-    <div class="overflow-hidden whitespace-nowrap flex flex-row bg-black text-white mt-5">
-        <div class="scroll-motion">
-            <span class="mx-5 text-9xl">PROJECTS</span>
-            <span class="mx-5 text-9xl">PROJECTS</span>
-            <span class="mx-5 text-9xl">PROJECTS</span>
-            <span class="mx-5 text-9xl">PROJECTS</span>
-            <span class="mx-5 text-9xl">PROJECTS</span>
-            <span class="mx-5 text-9xl">PROJECTS</span>
-            <span class="mx-5 text-9xl">PROJECTS</span>
+    <div class="overflow-hidden whitespace-nowrap flex flex-row bg-black text-white pt-5">
+        <div class="scroll-motion font-monument">
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
         </div>
     </div>
     <div id="projects-container" class="bg-black w-full h-screen">
-        <div id="project-inspector" class="w-100 h-100">
-
+        <div id="project-inspector" class="w-100 h-full relative text-white font-receipt">
+            <div class="projects-carousel flex justify-center place-content-center h-full w-full overflow-hidden">
+                <div  id="project-info-hover"  class="projectSlide my-auto flex ">
+                    <span id="projectTitle" class="uppercase tracking-[0.15em] my-auto font-monument text-5xl">ROGUE CARRIER</span>
+                    <div>
+                        <i class="h-12 p-1 fas fa-info-circle"></i>
+                    </div>
+                </div>
+            </div>
+            <button onclick="PreviousProject()" class="absolute top-0 left-0 flex items-center h-full text-7xl mx-24"><</button>
+            <button onclick="NextProject()" class="absolute top-0 right-0 flex items-center h-full text-7xl mx-24">></button>
         </div>
     </div>
-    <div class="cursorLerp">
+    <div class="overflow-hidden whitespace-nowrap flex flex-row bg-black text-white pt-5">
+        <div class="scroll-motion font-monument">
+            <span class="mx-5 text-7xl">SKILLMAP</span>
+            <span class="mx-5 text-7xl">SKILLMAP</span>
+            <span class="mx-5 text-7xl">SKILLMAP</span>
+            <span class="mx-5 text-7xl">SKILLMAP</span>
+            <span class="mx-5 text-7xl">SKILLMAP</span>
+            <span class="mx-5 text-7xl">SKILLMAP</span>
+            <span class="mx-5 text-7xl">SKILLMAP</span>
+            <span class="mx-5 text-7xl">SKILLMAP</span>
+            <span class="mx-5 text-7xl">SKILLMAP</span>
+            <span class="mx-5 text-7xl">SKILLMAP</span>
+        </div>
     </div>
-    <div id="cursor">
+    <div id="skillmap-container" class="bg-black w-full h-screen text-white">
+        <div id="skillmap-inspector" class="mx-16 pt-10 w-100 h-100 grid grid-flow-col auto-cols max">
+            <div class="text-left">Programming Languages
+                <ul>
+                    <li>C#</li>
+                    <li>C++</li>
+                    <li>C</li>
+                </ul>
+            </div>
+            <div>Database
+                <ul>
+
+                </ul>
+            </div>
+            <div>Cloud</div>
+            <div>Unix / Linux</div>
+            <div>Game Engines</div>
+            <div>Source Control</div>
+        </div>
+    </div>
+    <div id="cursorLerp">
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baffle.js/0.2.1/baffle.min.js" integrity="sha512-Ghp8QA8Vcn4PDhATrufXeMao68GnBRdo8xEXaV32BZdqGAthhNGQOKqw1x52caYIjdM/Tl9OgSaZ816MLpy6/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="module"> import three from 'https://cdn.skypack.dev/three'; </script>
 <script type="module">
     import threeFull from 'https://cdn.skypack.dev/three-full';

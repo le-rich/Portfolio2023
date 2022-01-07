@@ -1,5 +1,5 @@
 
-var $cursorLerp = $('.cursorLerp');
+var $cursorLerp = $('#cursorLerp');
 // var $cursor = $('.cursor');
 function moveCursors(e) {
 	TweenLite.to($cursorLerp, 0.2, {
@@ -8,24 +8,62 @@ function moveCursors(e) {
       top: e.pageY
     }
   });
-  
-  // TweenLite.to($cursor, 0.3, {
-  //   css: {
-  //     left: e.pageX,
-  //     top: e.pageY
-  //   }
-  // });
 }
 
 $(window).on('mousemove', moveCursors);
 
 
-$("#info-circle").mouseenter(function(){
+$("#richard-info-circle").mouseenter(function(){
   console.log("hidden")
   $("#infotainer").fadeIn();
 });
 
-$("#info-circle").mouseleave(function(){
+$("#richard-info-circle").mouseleave(function(){
   console.log("visible")
   $("#infotainer").fadeOut();
 });
+
+// PROJECTS CAROUSEL
+
+var currentProjectIdx = 0;
+
+const projectTitles = ["Rogue Carrier", "Hardspace: Shipbreaker", "EFI", "Ecocity: The Game", "Sunseeker", "Midnight Crown", "Roasted", "ARBoreal", "VisualEyes", "Hypeman", "VanIDI", "Canary"]
+
+let b = baffle("#projectTitle", {
+  characters: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()-+=[]{}|;:,./<>?▓█░',
+})
+
+
+function RunBaffleOnProjectTitle(){
+  b.start();
+  b.reveal(1000);
+}
+
+function NextProject(){
+  currentProjectIdx++;
+  currentProjectIdx %= projectTitles.length;
+  b.text(function(){
+    return projectTitles[currentProjectIdx]
+  });
+  RunBaffleOnProjectTitle();
+}
+
+function PreviousProject(){
+  currentProjectIdx--;
+  if (currentProjectIdx < 0){
+    currentProjectIdx = projectTitles.length - 1
+  }
+  currentProjectIdx %= projectTitles.length;
+  b.text(function(){
+    return projectTitles[currentProjectIdx]
+  });
+  RunBaffleOnProjectTitle();
+}
+
+function RefreshProject(){
+  RunBaffleOnProjectTitle(projectTitles[currentProjectIdx]);
+}
+
+function SwitchCategory(idx){
+  currProjectCategory = 0
+}
