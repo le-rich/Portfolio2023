@@ -20,7 +20,7 @@
 <body>
     <canvas class="webgl -z-50"></canvas>
     <header class="fixed w-full mt-5 h-16 font-receipt">
-        <nav class="flex flex-row items-center justify-between mx-14 text-2xl">
+        <nav id="top-navbar" class="transition-all duration-500 relative flex flex-row items-center justify-between mx-14 text-2xl">
             <a class="p-5">RL</a>
             <ul class="flex flex-row">
                 <li>
@@ -34,7 +34,7 @@
                 </li>
             </ul>
         </nav>
-        <div id="colorSwitcher" class="fixed z-40 bottom-0 -right-40 rotate-90 z-40 mb-52 text-sm">
+        <div id="color-switcher" class="transition-all duration-500 fixed z-40 bottom-0 right-0 rotate-90 z-40 -mx-40 mb-40 text-sm">
             <ul class="flex flex-row p-4 mix-blend-difference">
                 <li class="opacity-100">
                     <a class="p-5 mix-blend-difference">LUXE</a>
@@ -86,9 +86,9 @@
     </div>
     <div id="landing" class="container flex flex-col pt-20 w-full h-screen mx-24">
         <div class="flex flex-col grow justify-center content-end h-screen h-96">
-            <h1 class="text-2xl font-light">THE SOFTWARE DEVELOPER KNOWN AS</h1>
+            <h1 class="lg:text-2xl font-light">THE SOFTWARE DEVELOPER KNOWN AS</h1>
             <span class="flex flex-row">
-                <h1 class="text-9xl ">richard le</h1>
+                <h1 class="text-6xl md:text-9xl ">richard le</h1>
                 <i id="richard-info-circle" class="h-12 pulsate-fwd fas fa-2x fa-info-circle"></i>
             </span>
            

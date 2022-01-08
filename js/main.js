@@ -1,4 +1,6 @@
 
+// CURSOR
+
 var $cursorLerp = $('#cursorLerp');
 // var $cursor = $('.cursor');
 function moveCursors(e) {
@@ -22,6 +24,22 @@ $("#richard-info-circle").mouseleave(function(){
   console.log("visible")
   $("#infotainer").fadeOut();
 });
+
+// NAV HEADER ELEMENTS HIDE ON SCROLL
+var prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    $("#top-navbar").css("top", "0px");
+    $("#color-switcher").css("right", "0");
+  } 
+  else {
+    $("#top-navbar").css("top", "-500px");
+    $("#color-switcher").css("right", "-500px");
+  }
+  prevScrollpos = currentScrollPos;
+}
 
 // PROJECTS CAROUSEL
 
