@@ -27,7 +27,7 @@
                     <a href="#projects-container" class="p-5">Projects</a>
                 </li>
                 <li>
-                    <a href="#skillmap-container" class="p-5">Skillmap</a>
+                    <a href="#skillmap-container" class="p-5">Skills</a>
                 </li>
                 <li>
                     <a class="p-5">Contact</a>
@@ -112,13 +112,23 @@
     </div>
     <div id="projects-container" class="bg-black w-full h-screen">
         <div id="project-inspector" class="w-100 h-full relative text-white font-receipt">
-            <div class="projects-carousel flex justify-center place-content-center h-full w-full overflow-hidden">
-                <div  id="project-info-hover"  class="projectSlide my-auto flex ">
-                    <span id="projectTitle" class="uppercase tracking-[0.15em] my-auto font-monument text-5xl">ROGUE CARRIER</span>
+            <!-- <div id="project-description" class="absolute bg-white pointer-events-none opacity-70 w-full h-full flex justify-center place-content-center">
+                <span class="my-auto text-black">description here lorem ipsum</span>
+            </div> -->
+            <div id="projects-carousel" class="flex justify-center place-content-center h-full w-full overflow-hidden">
+
+                <div id="project-info-hover"  class="projectSlide my-auto flex ">
+                    <span id="projectTitle" class="uppercase tracking-[0.15em] my-auto font-monument text-5xl">
+                        ROGUE CARRIER  
+                    </span>
                     <div>
-                        <i class="h-12 p-1 fas fa-info-circle"></i>
+                        <i class="text-sm h-12 p-1 fas fa-info-circle"></i>
+                    </div>
+                    <div class="text-center mx-auto my-14 absolute">
+                        <p class="mx-auto">This is a description</p>
                     </div>
                 </div>
+
             </div>
             <button onclick="PreviousProject()" class="absolute top-0 left-0 flex items-center h-full text-7xl mx-24"><</button>
             <button onclick="NextProject()" class="absolute top-0 right-0 flex items-center h-full text-7xl mx-24">></button>
@@ -126,36 +136,60 @@
     </div>
     <div class="overflow-hidden whitespace-nowrap flex flex-row bg-black text-white pt-5">
         <div class="scroll-motion font-monument">
-            <span class="mx-5 text-7xl">SKILLMAP</span>
-            <span class="mx-5 text-7xl">SKILLMAP</span>
-            <span class="mx-5 text-7xl">SKILLMAP</span>
-            <span class="mx-5 text-7xl">SKILLMAP</span>
-            <span class="mx-5 text-7xl">SKILLMAP</span>
-            <span class="mx-5 text-7xl">SKILLMAP</span>
-            <span class="mx-5 text-7xl">SKILLMAP</span>
-            <span class="mx-5 text-7xl">SKILLMAP</span>
-            <span class="mx-5 text-7xl">SKILLMAP</span>
-            <span class="mx-5 text-7xl">SKILLMAP</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
         </div>
     </div>
-    <div id="skillmap-container" class="bg-black w-full h-screen text-white">
+    <div id="skillmap-container" class="w-full h-screen">
         <div id="skillmap-inspector" class="mx-16 pt-10 w-100 h-100 grid grid-flow-col auto-cols max">
-            <div class="text-left">Programming Languages
-                <ul>
-                    <li>C#</li>
-                    <li>C++</li>
-                    <li>C</li>
+            <div class="text-left w-2/4">
+                <p class="text-2xl mb-14">
+                    I'm a <b>software developer and programmer</b>. 
+                    <br>I've got an <b>eye for design</b> and a brain jelly warped enough to adapt to <b>both creative and utilitarian digital work</b>.
+                    Just don't ask me to sing.
+                </p>
+                <br>
+                <ul class="text-md space-y-4">
+                    <li>
+                        <b>Languages:</b>
+                       C#, C++, C, Java, JavaScript, OCaml, Elixir, Go, Python
+                    </li>
+                    <li>
+                        <b>Web and Mobile:</b>
+                        HTML/CSS/JS, WebGL, ThreeJS, TailwindCSS, GSAP, Bootstrap, React, React Native, Android Studio, Flutter
+                    </li>
+                    <li>
+                        <b>Database:</b>
+                        MYSQL, SQL, Google Firebase
+                    </li>
+                    <li>
+                        <b>Cloud/ Network:</b>
+                        AWS, Google Cloud, DigitalOcean, Docker
+                    </li>
+                    <li>
+                        <b>Game Engines:</b>
+                        Unreal Engine, Unity, Frostbite
+                    </li>
+                    <li>
+                        <b>3D and Animation:</b>
+                        Rigging and Animation Principles, Hard-Surface Modeling
+                    </li>
+                    <li>
+                        <b>VCS and CI/CD:</b>
+                        Git, Perforce, Jenkins
+                    </li>
                 </ul>
             </div>
-            <div>Database
-                <ul>
-
-                </ul>
-            </div>
-            <div>Cloud</div>
-            <div>Unix / Linux</div>
-            <div>Game Engines</div>
-            <div>Source Control</div>
         </div>
     </div>
     <div id="cursorLerp">

@@ -85,3 +85,17 @@ function RefreshProject(){
 function SwitchCategory(idx){
   currProjectCategory = 0
 }
+
+// COLOR CHANGE SELECTORS
+
+function ColorModeCleanCut(){
+  console.log("Superclean")
+}
+
+function ColorModeCyberWarfare(){
+  console.log("Cyberwarfare")
+}
+
+function ColorModeLuxe(){
+  console.log("Luxe")
+}
