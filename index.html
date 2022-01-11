@@ -111,27 +111,28 @@
         </div>
     </div>
     <div id="projects-container" class="bg-black w-full h-screen">
-        <div id="project-inspector" class="w-100 h-full relative text-white font-receipt">
-            <div id="projects-carousel" class="flex justify-center place-content-center h-full w-full overflow-hidden">
-
+        <div id="project-inspector" class="w-100 h-full relative text-white place-content-center flex flex-col font-receipt">
+            <div id="projects-carousel" class="flex justify-center place-content-center  w-full overflow-hidden">
                 <div id="project-info-hover"  class="projectSlide my-auto flex ">
-                    <span id="projectTitle" class="uppercase tracking-[0.15em] my-auto font-monument text-5xl">
-                        ROGUE CARRIER  
-                    </span>
+                    <div class="flex flex-col">
+                        <span id="projectTitle" class="uppercase tracking-[0.15em] my-auto font-monument text-5xl">
+                            ROGUE CARRIER  
+                        </span>
+                        <span class="uppercase leading-7">VIDEO GAME - PERSONAL - 7 Days</span>
+                    </div>
                     <div>
                         <i class="text-sm h-12 p-1 fas fa-info-circle"></i>
                     </div>
-                    <div class="text-left my-10 absolute">
-                        <p class="uppercase leading-7">VIDEO GAME - PERSONAL</p>
-                    </div>
-                </div>
-                <div class="text-left mx-80 my-44 absolute bottom-5">
-                    <p id="project-description" class="mx-auto text-md leading-7">This is a description</p>
+                    
                 </div>
             </div>
             <button onclick="PreviousProject()" class="absolute top-0 left-0 flex items-center h-full text-7xl mx-24"><</button>
             <button onclick="NextProject()" class="absolute top-0 right-0 flex items-center h-full text-7xl mx-24">></button>
+            <div class="text-left text-white absolute">
+                <p id="project-description" class="mx-auto text-md leading-7">This is a description</p>
+            </div>
         </div>
+
     </div>
     <div class="overflow-hidden whitespace-nowrap flex flex-row bg-black text-white pt-5">
         <div class="scroll-motion font-monument">
@@ -150,7 +151,7 @@
         </div>
     </div>
     <div id="skillmap-container" class="w-full h-screen">
-        <div id="skillmap-inspector" class=" align-middle mx-56 pt-20 w-100 h-100 grid grid-flow-col auto-cols max">
+        <div id="skillmap-inspector" class=" align-middle mx-56 pt-14 w-100 h-100 grid grid-flow-col auto-cols max">
             <div class="text-left w-2/4">
                 <p class="text-2xl mb-4">
                     I'm a 24 year-old <b>software developer</b> based in <b>Vancouver, BC</b>.
@@ -169,6 +170,10 @@
                     <li>
                         <b>Database:</b><br>
                         MYSQL, SQL, Google Firebase
+                    </li>
+                    <li>
+                        <b>Unix/ Linux</b><br>
+                        VMs, Command-Line, Bash, Shell Scripting, Vim, Arch, Ubuntu
                     </li>
                     <li>
                         <b>Cloud/ Network:</b><br>

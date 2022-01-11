@@ -59,7 +59,7 @@ function ColorModeLuxe(){
 
 
 // PROJECT INFO/ DESCRIPTIONS
-const projectTitles = ["Rogue Carrier", "Hardspace: Shipbreaker", "EFI", "Ecocity: The Game", "Sunseeker", "Midnight Crown", "Roasted", "ARBoreal", "VisualEyes", "Hypeman", "VanIDI", "Canary"]
+const projectTitles = ["Rogue Carrier", "Hardspace: Shipbreaker", "STARPACK", "Ecocity: The Game", "Sunseeker", "Midnight Crown", "Roasted", "ARBoreal", "VisualEyes", "Hypeman", "VanIDI", "Canary"]
 const projectDescriptions = 
 {
   "Rogue Carrier": "A Video Game Made for Kajam 2021 in 7 Days. Control the weapon systems of a rogue Aircraft Carrier. <br> Use Weapons and airstrikes to defend yourself against an enemy fleet.",
