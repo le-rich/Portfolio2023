@@ -37,13 +37,13 @@
         <div id="color-switcher" class="transition-all duration-500 fixed z-40 bottom-0 right-0 rotate-90 z-40 -mx-40 mb-40 text-sm">
             <ul class="flex flex-row p-4 mix-blend-difference">
                 <li class="opacity-100">
-                    <a class="p-5 mix-blend-difference">LUXE</a>
+                    <button onclick="ColorModeLuxe()" class="p-5 mix-blend-difference">LUXE</button>
                 </li>
                 <li>
-                    <a class="p-5 mix-blend-difference">CYBERWARFARE</a>
+                    <button onclick="ColorModeCyberWarfare()" class="p-5 mix-blend-difference">CYBERWARFARE</button>
                 </li>
                 <li>
-                    <a class="p-5 mix-blend-difference underline underline-offset-4">CLEAN-CUT</a>
+                    <button onclick="ColorModeCleanCut()" class="p-5 mix-blend-difference underline underline-offset-4">CLEAN-CUT</button>
                 </li>                
             </ul>
         </div>
@@ -88,7 +88,7 @@
         <div class="flex flex-col grow justify-center content-end h-screen h-96">
             <h1 class="lg:text-2xl font-light">THE SOFTWARE DEVELOPER KNOWN AS</h1>
             <span class="flex flex-row">
-                <h1 class="text-6xl md:text-9xl ">richard le</h1>
+                <h1 class="text-6xl md:text-9xl">richard le</h1>
                 <i id="richard-info-circle" class="h-12 pulsate-fwd fas fa-2x fa-info-circle"></i>
             </span>
            
@@ -118,19 +118,19 @@
                         <span id="projectTitle" class="uppercase tracking-[0.15em] my-auto font-monument text-5xl">
                             ROGUE CARRIER  
                         </span>
-                        <span class="uppercase leading-7">VIDEO GAME - PERSONAL - 7 Days</span>
+                        <span id="project-slugline" class="uppercase leading-7">VIDEO GAME - PERSONAL - 7 Days</span>
                     </div>
                     <div>
                         <i class="text-sm h-12 p-1 fas fa-info-circle"></i>
                     </div>
-                    
+                </div>
+                <div class="text-left text-white absolute mx-48 my-10 bottom-0">
+                    <p id="project-description" class="mx-auto text-md leading-7">This is a description</p>
                 </div>
             </div>
             <button onclick="PreviousProject()" class="absolute top-0 left-0 flex items-center h-full text-7xl mx-24"><</button>
             <button onclick="NextProject()" class="absolute top-0 right-0 flex items-center h-full text-7xl mx-24">></button>
-            <div class="text-left text-white absolute">
-                <p id="project-description" class="mx-auto text-md leading-7">This is a description</p>
-            </div>
+
         </div>
 
     </div>
