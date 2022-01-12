@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="http://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/fake-receipt" rel="stylesheet">
@@ -112,10 +113,10 @@
     </div>
     <div id="projects-container" class="bg-black w-full h-screen">
         <div id="project-inspector" class="w-100 h-full relative text-white place-content-center flex flex-col font-receipt">
-            <div id="projects-carousel" class="flex justify-center place-content-center  w-full overflow-hidden">
-                <div id="project-info-hover"  class="projectSlide my-auto flex ">
-                    <div class="flex flex-col">
-                        <span id="projectTitle" class="uppercase tracking-[0.15em] my-auto font-monument text-5xl">
+            <div id="projects-carousel" class="flex justify-center place-content-center w-full overflow-hidden">
+                <div id="project-info-hover"  class="projectSlide my-auto flex absolute">
+                    <div class="flex flex-col drop-shadow-md z-40">
+                        <span id="projectTitle" class=" uppercase tracking-[0.15em] my-auto font-monument text-5xl">
                             ROGUE CARRIER  
                         </span>
                         <span id="project-slugline" class="uppercase leading-7">VIDEO GAME - PERSONAL - 7 Days</span>
@@ -124,10 +125,51 @@
                         <i class="text-sm h-12 p-1 fas fa-info-circle"></i>
                     </div>
                 </div>
-                <div class="text-left text-white absolute mx-48 my-10 bottom-0">
-                    <p id="project-description" class="mx-auto text-md leading-7">This is a description</p>
+                <div class="carousel w-full h-full top-0 absolute" data-flickity='{ "lazyLoad": true, "wrapAround": true, "pageDots": false, prevNextButtons: false }'>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                            data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/tulip.jpg" alt="tulip" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                            data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/grapes.jpg" alt="grapes" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                            data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/raspberries.jpg"
+                            alt="raspberries" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                            data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/wolf.jpg" alt="wolf" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                            data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/shore.jpg" alt="sea" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                            data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/leaf-droplets.jpg"
+                            alt="leaf droplets" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                            data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/gulls.jpg" alt="gulls" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                            data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/touch-screen.jpg"
+                            alt="touch screen" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="carousel-cell-image"
+                            data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/van.jpg" alt="van" />
+                    </div>
                 </div>
-            </div>
+                <div class="text-left text-white absolute mx-52 my-10 bottom-0">
+                    <p id="project-description" class="hidden mx-auto text-md leading-7">This is a description</p>
+                </div>
+                </div>
             <button onclick="PreviousProject()" class="absolute top-0 left-0 flex items-center h-full text-7xl mx-24"><</button>
             <button onclick="NextProject()" class="absolute top-0 right-0 flex items-center h-full text-7xl mx-24">></button>
 
@@ -135,7 +177,7 @@
 
     </div>
     <div class="overflow-hidden whitespace-nowrap flex flex-row bg-black text-white pt-5">
-        <div class="scroll-motion font-monument">
+        <div class="scroll-motion-reverse font-monument">
             <span class="mx-5 text-7xl">SELECTED WORKS</span>
             <span class="mx-5 text-7xl">SELECTED WORKS</span>
             <span class="mx-5 text-7xl">SELECTED WORKS</span>
@@ -199,12 +241,30 @@
             </div>
         </div>
     </div>
+    <div class="overflow-hidden whitespace-nowrap flex flex-row bg-black text-white pt-5">
+        <div class="scroll-motion-reverse font-monument">
+            <span class="mx-5 text-7xl">GET IN TOUCH!</span>
+            <span class="mx-5 text-7xl">SAY HELLO!</span>
+            <span class="mx-5 text-7xl">GET IN TOUCH!</span>
+            <span class="mx-5 text-7xl">SAY HELLO!</span>
+            <span class="mx-5 text-7xl">GET IN TOUCH!</span>
+            <span class="mx-5 text-7xl">SAY HELLO!</span>
+            <span class="mx-5 text-7xl">GET IN TOUCH!</span>
+            <span class="mx-5 text-7xl">SAY HELLO!</span>
+            <span class="mx-5 text-7xl">GET IN TOUCH!</span>
+            <span class="mx-5 text-7xl">SAY HELLO!</span>
+        </div>
+    </div>
+    <div id="contact-container" class="w-full h-[15vh] bg-black">
+        <span class="Richard Le 2022"></span>
+    </div>
     <div id="cursorLerp">
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/baffle.js/0.2.1/baffle.min.js" integrity="sha512-Ghp8QA8Vcn4PDhATrufXeMao68GnBRdo8xEXaV32BZdqGAthhNGQOKqw1x52caYIjdM/Tl9OgSaZ816MLpy6/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script type="module"> import three from 'https://cdn.skypack.dev/three'; </script>
 <script type="module">
     import threeFull from 'https://cdn.skypack.dev/three-full';

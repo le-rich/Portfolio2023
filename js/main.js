@@ -14,7 +14,7 @@ function moveCursors(e) {
 
 $(window).on('mousemove', moveCursors);
 
-
+// SHOW / HIDES
 $("#richard-info-circle").mouseenter(function(){
   console.log("hidden")
   $("#infotainer").fadeIn();
@@ -24,6 +24,17 @@ $("#richard-info-circle").mouseleave(function(){
   console.log("visible")
   $("#infotainer").fadeOut();
 });
+
+$("#project-info-hover").mouseenter(function(){
+  console.log("hidden")
+  $("#project-description").fadeIn();
+});
+
+$("#project-info-hover").mouseleave(function(){
+  console.log("visible")
+  $("#project-description").fadeOut();
+});
+
 
 // NAV HEADER ELEMENTS HIDE ON SCROLL
 var prevScrollpos = window.pageYOffset;
@@ -41,8 +52,6 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
-
-
 // COLOR CHANGE SELECTORS
 
 function ColorModeCleanCut(){
@@ -58,8 +67,19 @@ function ColorModeLuxe(){
 }
 
 
+// PROJECT CAROUSEL FLICKITY
+var elem = document.querySelector('.carousel');
+var flkty = new Flickity( elem, {
+  // options
+  lazyLoad: true,
+  "wrapAround": true,
+  pageDots: false,
+  prevNextButtons: false,
+});
+
+
 // PROJECT INFO/ DESCRIPTIONS
-const projectTitles = ["Rogue Carrier", "Hardspace: Shipbreaker", "STARPACK", "Ecocity: The Game", "Sunseeker", "Midnight Crown", "Roasted", "ARBoreal", "VisualEyes", "Hypeman", "VanIDI", "Canary"]
+const projectTitles = ["Rogue Carrier", "Hardspace: Shipbreaker", "Starpack", "Ecocity: The Game", "Sunseeker", "Midnight Crown", "Roasted", "ARBoreal", "VisualEyes", "Hypeman", "VanIDI", "Canary"]
 const projectInfo = 
 {
   "Rogue Carrier": {  
@@ -70,7 +90,7 @@ const projectInfo =
     "description": "Equipped with cutting-edge salvaging tech, carve & slice spaceships to recover valuable materials.<br> Upgrade your gear to take on more lucrative contracts and pay your billion credits debt to LYNX Corp.",
     "slugline": "Video Game - Blackbird Interactive - Available Now"
   },
-  "EFI": {
+  "Starpack": {
     "description": "A BC Game Jam Game made to answer a simple question. <br> What does the most insane version of space invaders to ever exist look like? <br> Now we know.",
     "slugline": "Video Game - Personal - 8 Hours"
   },
@@ -91,15 +111,15 @@ const projectInfo =
     "slugline": "Video Game - Personal - 3 Days"
   },
   "ARBoreal": {
-    "descripion":"An AR research project I participated in under the supervision Dr.Michael Barton. <br><br> The intention of the project was to enable architectural visualization of structures before they are built, and then to use AR to assist in the construction process once designs are finalized. To be used both industrially and educationally. I was responsible for building a cross software solution for transferring 3D data from an architectural prototyping software, Rhinoceros, to the Unity Game Engine in order to be rendered by the Microsoft Hololens.",
+    "description":"An AR research project to enable architectural visualization of structures before they are built, and then to use AR to assist in the construction process. To be used both industrially and educationally.",
     "slugline": "Software - COHO Labs"
   },
   "VisualEyes": {
-    "descripion":"A Computer Vision/ Machine learning app that brings you to a product's storefront just by taking a photo of it. Using your phone's camera, a picture is taken of whatever you want to look up. Shape, color and text are analyzed and you are given the storefront of the closest match!",
+    "description":"A Computer Vision/ Machine learning app that brings you to a product's storefront just by taking a photo of it. Using your phone's camera, a picture is taken of whatever you want to look up. Shape, color and text are analyzed and you are given the storefront of the closest match!",
     "slugline": "Web App - Hackathon - 24 Hours"
   },
   "Hypeman": {
-    "descripion":"A social platform for motivation and energy. Post your daily qualms on a board full of positivity. Readers can 'up-hype' your post and send energy your way. But what if you're not feeling like posting? What if that's too much work? There's a feature called HYPEBOOST that, when selected, notifies everyone in your network to GIVE YOU SOME HYPE by asking you to SCREAM into the microphone! The app comes with a leaderboard for those that give and receive the most \"up-hypes\", moderation for negative comments, and an extremely sleek, lightweight user interface!",
+    "description":"A social platform for motivation and energy. Post your daily qualms on a board full of positivity. Readers can 'up-hype' your post and send energy your way.",
     "slugline": "Web App - Hackathon - 24 Hours"
   },
   "VanIDI": {
@@ -119,6 +139,7 @@ const projectInfo =
 // INIT PROJECTS
 window.addEventListener('load', (event) => {
   RefreshProject();
+  flkty.selectCell(0);
 });
 
 // PROJECTS CAROUSEL
@@ -147,6 +168,7 @@ function NextProject(){
   b.text(function(){
     return projectTitles[currentProjectIdx]
   });
+  flkty.next();
   UpdateProjectDescriptionAndSlugline()
   RunBaffleOnProjectTitle();
 }
@@ -160,6 +182,7 @@ function PreviousProject(){
   b.text(function(){
     return projectTitles[currentProjectIdx]
   });
+  flkty.previous();
   UpdateProjectDescriptionAndSlugline()
   RunBaffleOnProjectTitle();
 }

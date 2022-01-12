@@ -8,6 +8,7 @@ html, body {
     /* font-family: 'Neue Helvetica', sans-serif; */
     scroll-behavior: smooth;
     background-color: transparent;
+    box-sizing: border-box; 
 }
 
 @-ms-viewport{
@@ -49,6 +50,13 @@ html, body {
     width: 100%;
     animation: scroll-motion 25s linear infinite;
 
+}
+
+.scroll-motion-reverse{
+    width: 100%;
+    animation: scroll-motion 25s linear infinite;
+    animation-direction: reverse
+    ;
 }
 
 @keyframes scroll-motion{
@@ -133,4 +141,27 @@ html, body {
     top: 0;
     left: 0;
     outline: none;
+}
+
+
+.carousel-cell {
+    width: 66%;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.carousel-cell-image {
+  display: block;
+  max-height: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
 }
