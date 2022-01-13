@@ -21,8 +21,8 @@
 </head>
 <body>
     <canvas class="webgl -z-50"></canvas>
-    <header class="fixed w-full mt-5 h-16 font-receipt">
-        <nav id="top-navbar" class="transition-all duration-500 relative flex flex-row items-center justify-between mx-14 text-2xl">
+    <header class="fixed w-full mt-5 h-16 uppercase">
+        <nav id="top-navbar" class="transition-all duration-500 relative flex flex-row items-center justify-between mx-14 text-2xl font-bold">
             <a class="p-5">RL</a>
             <ul class="flex flex-row">
                 <li>
@@ -36,7 +36,7 @@
                 </li>
             </ul>
         </nav>
-        <div id="color-switcher" class="transition-all duration-500 fixed z-40 bottom-0 right-0 rotate-90 z-40 -mx-40 mb-40 text-sm">
+        <div id="color-switcher" class="transition-all duration-500 fixed z-40 bottom-0 right-0 rotate-90 z-40 -mx-40 mb-40">
             <ul class="flex flex-row p-4 mix-blend-difference">
                 <li class="opacity-100">
                     <button onclick="ColorModeLuxe()" class="p-5 mix-blend-difference">LUXE</button>
@@ -45,11 +45,11 @@
                     <button onclick="ColorModeCyberWarfare()" class="p-5 mix-blend-difference">CYBERWARFARE</button>
                 </li>
                 <li>
-                    <button onclick="ColorModeCleanCut()" class="p-5 mix-blend-difference underline underline-offset-4">CLEAN-CUT</button>
+                    <button onclick="ColorModeCleanCut()" class="p-5 mix-blend-difference underline underline-offset-8">CLEAN-CUT</button>
                 </li>                
             </ul>
         </div>
-        <div id="socials" class="fixed z-40 mb-5 bottom-0 ml-5">
+        <!-- <div id="socials" class="fixed z-40 mb-5 bottom-0 ml-5">
             <ul class="p-1 rounded-full bg-black flex flex-row">
                 <li>
                     <a class="px-2">
@@ -62,7 +62,7 @@
                     </a>
                 </li>
             </ul>         
-        </div>
+        </div> -->
     </header>
     <div id="infotainer" class="hidden opacity-95 pointer-events-none bg-black absolute top-0 left-0 w-full h-screen">
         <div class="container flex flex-col m-28 text-white ">
