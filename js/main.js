@@ -56,7 +56,9 @@ function ColorModeLuxe(){
 
 
 // PROJECT CAROUSEL FLICKITY
-var elem = document.querySelector('.carousel');
+var elem = document.querySelector('.carousel1');
+var elem2 = document.querySelector('.carousel2');
+var elem3 = document.querySelector('.carousel3');
 var flkty = new Flickity( elem, {
   // options
   lazyLoad: true,
@@ -66,6 +68,27 @@ var flkty = new Flickity( elem, {
   contain: true,
   freeScroll: true,
 });
+
+var flkty2 = new Flickity( elem2, {
+  // options
+  lazyLoad: true,
+  pageDots: false,
+  prevNextButtons: false,
+  draggable: true,
+  contain: true,
+  freeScroll: true,
+});
+
+var flkty2 = new Flickity( elem3, {
+  // options
+  lazyLoad: true,
+  pageDots: false,
+  prevNextButtons: false,
+  draggable: true,
+  contain: true,
+  freeScroll: true,
+});
+
 
 
 // PROJECT INFO/ DESCRIPTIONS
