@@ -16,25 +16,12 @@ $(window).on('mousemove', moveCursors);
 
 // SHOW / HIDES
 $("#richard-info-circle").mouseenter(function(){
-  console.log("hidden")
   $("#infotainer").fadeIn();
 });
 
 $("#richard-info-circle").mouseleave(function(){
-  console.log("visible")
   $("#infotainer").fadeOut();
 });
-
-$("#project-info-hover").mouseenter(function(){
-  console.log("hidden")
-  $("#project-description").fadeIn();
-});
-
-$("#project-info-hover").mouseleave(function(){
-  console.log("visible")
-  $("#project-description").fadeOut();
-});
-
 
 // NAV HEADER ELEMENTS HIDE ON SCROLL
 var prevScrollpos = window.pageYOffset;
@@ -72,9 +59,9 @@ var elem = document.querySelector('.carousel');
 var flkty = new Flickity( elem, {
   // options
   lazyLoad: true,
-  "wrapAround": true,
   pageDots: false,
   prevNextButtons: false,
+  draggable: true
 });
 
 
@@ -138,15 +125,14 @@ const projectInfo =
 
 // INIT PROJECTS
 window.addEventListener('load', (event) => {
-  RefreshProject();
-  flkty.selectCell(0);
+
 });
 
 // PROJECTS CAROUSEL
 var currentProjectIdx = 0;
 
 
-let b = baffle("#projectTitle", {
+let b = baffle("#project-title", {
   characters: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()-+=[]{}|;:,./<>?▓█░',
 })
 
@@ -161,6 +147,7 @@ function RunBaffleOnProjectTitle(){
   b.start();
   b.reveal(1000);
 }
+
 
 function NextProject(){
   currentProjectIdx++;
