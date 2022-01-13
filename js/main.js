@@ -14,6 +14,7 @@ function moveCursors(e) {
 
 $(window).on('mousemove', moveCursors);
 
+
 // SHOW / HIDES
 $("#richard-info-circle").mouseenter(function(){
   $("#infotainer").fadeIn();
@@ -123,9 +124,10 @@ const projectInfo =
   }
 }
 
-// INIT PROJECTS
+// INIT
 window.addEventListener('load', (event) => {
-
+  $("#top-navbar").css("top", "0px");
+  $("#color-switcher").css("right", "0");
 });
 
 // PROJECTS CAROUSEL
