@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="http://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/warownia" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/fake-receipt" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/vcr-osd-mono" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/bodoni-std" rel="stylesheet">
@@ -85,17 +86,31 @@
             </p>
         </div>
     </div>
-    <div id="landing" class="container flex flex-col pt-20 w-full h-screen mx-24">
-        <div class="flex flex-col grow justify-center content-end h-screen h-96">
+    <div id="landing" class="container flex flex-col w-full h-screen z-50">
+        <div class="flex flex-col grow justify-center content-end h-screen h-96 mx-24  pt-20">
             <h1 class="lg:text-2xl font-light">THE SOFTWARE DEVELOPER KNOWN AS</h1>
             <span class="flex flex-row">
-                <h1 class="text-6xl md:text-9xl">richard le</h1>
-                <i id="richard-info-circle" class="h-12 pulsate-fwd fas fa-2x fa-info-circle"></i>
+                <h1 class="tracking-wider font-bold text-6xl md:text-9xl">RICHARD LE</h1>
+                <i id="richard-info-circle" class="h-12 fas fa-info-circle"></i>
             </span>
-           
         </div>
+        <div class="absolute w-full h-full grainy-gradient-landing -z-500">
+            <svg class="absolute w-full h-full" xmlns='http://www.w3.org/2000/svg'>
+                <filter id='noiseFilter'>
+                  <feTurbulence 
+                    type='fractalNoise' 
+                    baseFrequency='0.65' 
+                    numOctaves='3' 
+                    stitchTiles='stitch'/>
+                </filter>
+                
+                <rect width='100%' height='100%' filter='url(#noiseFilter)'/>
+            </svg>
+        </div>
+
     </div>
-    <div class="overflow-hidden whitespace-nowrap flex flex-row bg-black text-white pt-5">
+    <div class="overflow-hidden whitespace-nowrap flex flex-row bg-neutral-900
+     text-white pt-8">
         <div class="scroll-motion font-monument">
             <span class="mx-5 text-7xl">SELECTED WORKS</span>
             <span class="mx-5 text-7xl">SELECTED WORKS</span>
@@ -109,47 +124,48 @@
             <span class="mx-5 text-7xl">SELECTED WORKS</span>
             <span class="mx-5 text-7xl">SELECTED WORKS</span>
             <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
+            <span class="mx-5 text-7xl">SELECTED WORKS</span>
         </div>
     </div>
-    <div id="projects-container" class="bg-black w-full">
+    <div id="projects-container" class="bg-neutral-900 w-full">
         <div id="project-inspector" class="w-100 h-full relative text-white place-content-end flex flex-col font-receipt">
+            <hr class="m-8 bg-white">
             <div class="flex flex-col justify-items-center w-full overflow-hidden">
-                <div id="project-info-hover" class="projectSlide my-auto  mb-24 flex justify-center place-content-center">
+                <div id="project-featured-hardspace" class="projectSlide my-auto flex justify-between  mx-8">
                     <div class="flex mix-blend-difference flex-col drop-shadow-md z-40">
-                        <span id="project-title" class="uppercase tracking-[0.15em] font-monument text-6xl">
-                            ROGUE CARRIER  
+                        <span id="project-title" class="uppercase tracking-[0.15em] font-monument text-4xl">
+                            HARDSPACE: SHIPBREAKER  
                         </span>
-                        <span id="project-slugline" class="uppercase leading-7">VIDEO GAME - PERSONAL - 7 Days</span>
+                        <span id="project-slugline" class="uppercase leading-7">VIDEO GAME - BLACKBIRD INTERACTIVE - 2020</span>
                     </div>
-                    <div id="project-info-icon" class="z-40">
-                        <i class="text-sm h-12 p-1 fas fa-info-circle"></i>
-                    </div>
+                    <p class="text-justify max-w-xl font-space-mono uppercase">Equipped with cutting-edge salvaging tech, carve & slice spaceships to recover valuable materials. Upgrade your gear to take on more lucrative contracts and pay your billion credits debt to LYNX Corp.</p>
                 </div>
-                <div class="carousel w-full h-screen" data-flickity='{ "lazyLoad": true, "wrapAround": true, "pageDots": false, prevNextButtons: false }'>
-                    <div class="carousel-cell flex flex-col place-content-center">
-                        <div class="text-left mx-24">
-                            <video preload="none" src="/assets/mp4/rogue.mp4" loop="loop"  muted="muted" autoplay playsinline webkit-playsinline></video>
+                <div class="carousel w-full h-[80vh] inline-block">
+                    <div class="carousel-cell flex flex-col">
+                        <div class="text-left  ml-8 my-8">
+                            <video style="max-height: 100%;" preload="none" src="assets/mp4/hssb.mp4" loop="loop"  muted="muted" autoplay playsinline webkit-playsinline>
+                                <source src="assets/mp4/hssb.mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
-                    <div class="carousel-cell flex flex-col place-content-center">
-                        <div class="text-left mx-14">
-                            <video preload="none" src="/assets/mp4/hssb.mp4" loop="loop"  muted="muted" autoplay playsinline webkit-playsinline></video>
+                    <div class="carousel-cell flex flex-col">
+                        <div class="text-left ml-8 my-8">
+                           <img src="assets/img/hssb/s1.jpg">
                         </div>
                     </div>
-                    <div class="carousel-cell flex flex-col place-content-center">
-                        <div class="text-left mx-24">
-                            <video preload="none" src="/assets/mp4/roasted.mp4" loop="loop"  muted="muted" autoplay playsinline webkit-playsinline></video>
+                    <div class="carousel-cell flex flex-col">
+                        <div class="text-left ml-8 my-8">
+                           <img src="assets/img/hssb/s2.jpg">
                         </div>
                     </div>
                 </div>
                 </div>
-            <button onclick="PreviousProject()" class="absolute top-0 left-0 flex items-center h-full text-7xl mx-24"><</button>
-            <button onclick="NextProject()" class="absolute top-0 right-0 flex items-center h-full text-7xl mx-24">></button>
-
+                <hr class="m-8 bg-white">
         </div>
-
     </div>
-    <div class="overflow-hidden whitespace-nowrap flex flex-row bg-black text-white pt-5">
+    <div class="overflow-hidden whitespace-nowrap flex flex-row bg-neutral-900 text-white pb-8">
         <div class="scroll-motion-reverse font-monument">
             <span class="mx-5 text-7xl">SELECTED WORKS</span>
             <span class="mx-5 text-7xl">SELECTED WORKS</span>

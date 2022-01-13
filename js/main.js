@@ -62,7 +62,9 @@ var flkty = new Flickity( elem, {
   lazyLoad: true,
   pageDots: false,
   prevNextButtons: false,
-  draggable: true
+  draggable: true,
+  contain: true,
+  freeScroll: true,
 });
 
 
