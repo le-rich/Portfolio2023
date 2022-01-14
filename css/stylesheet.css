@@ -73,7 +73,7 @@ html, body {
 }
 
 @keyframes scroll-motion{
-    to {transform: translateX(-100%);}
+    to {transform: translateX(-75%);}
 }
 
 .pulsate-fwd {

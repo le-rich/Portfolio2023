@@ -59,6 +59,7 @@ function ColorModeLuxe(){
 var elem = document.querySelector('.carousel1');
 var elem2 = document.querySelector('.carousel2');
 var elem3 = document.querySelector('.carousel3');
+var elem4 = document.querySelector('.carousel4');
 var flkty = new Flickity( elem, {
   // options
   lazyLoad: true,
@@ -79,7 +80,7 @@ var flkty2 = new Flickity( elem2, {
   freeScroll: true,
 });
 
-var flkty2 = new Flickity( elem3, {
+var flkty3 = new Flickity( elem3, {
   // options
   lazyLoad: true,
   pageDots: false,
@@ -89,7 +90,15 @@ var flkty2 = new Flickity( elem3, {
   freeScroll: true,
 });
 
-
+var flkty4 = new Flickity( elem4, {
+  // options
+  lazyLoad: true,
+  pageDots: false,
+  prevNextButtons: false,
+  draggable: true,
+  contain: true,
+  freeScroll: true,
+});
 
 // PROJECT INFO/ DESCRIPTIONS
 const projectTitles = ["Rogue Carrier", "Hardspace: Shipbreaker", "Starpack", "Ecocity: The Game", "Sunseeker", "Midnight Crown", "Roasted", "ARBoreal", "VisualEyes", "Hypeman", "VanIDI", "Canary"]
