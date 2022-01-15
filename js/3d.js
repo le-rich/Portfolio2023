@@ -1,5 +1,7 @@
 import * as THREE from 'https://cdn.skypack.dev/-/three-full@v28.0.2-vXctAfDjnTFinuDDLbIh/dist=es2019,mode=imports/optimized/three-full.js'
 import { OBJLoader } from 'https://cdn.skypack.dev/-/three-full@v28.0.2-vXctAfDjnTFinuDDLbIh/dist=es2019,mode=imports/optimized/three-full.js'
+
+
 /**
  * Base
  */
@@ -37,6 +39,18 @@ loader.load(
 
 	}
 )
+
+
+export function ActivateMeshCyberWarfare() {
+    daggerMesh.material = new THREE.MeshBasicMaterial({
+        color: 0x00ff00,
+        wireframe: true
+    });
+    daggerMesh.material.needsUpdate = true;
+}
+
+
+
 
 /**
  * Object
@@ -86,7 +100,7 @@ const renderer = new THREE.WebGLRenderer({
 })
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-renderer.setClearColor(0xf9f6ee, 1)
+//renderer.setClearColor(0xf9f6ee, 1)
 
 /**
  * Animate

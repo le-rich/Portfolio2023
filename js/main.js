@@ -1,10 +1,11 @@
+import { ActivateMeshCyberWarfare } from './3d.js'
+
 
 // CURSOR
-
 var $cursorLerp = $('#cursorLerp');
 // var $cursor = $('.cursor');
 function moveCursors(e) {
-	TweenLite.to($cursorLerp, 0.2, {
+	TweenLite.to($cursorLerp, 0.1, {
     css: {
       left: e.pageX,
       top: e.pageY
@@ -45,14 +46,22 @@ window.onscroll = function() {
 function ColorModeCleanCut(){
   console.log("Superclean")
 }
+window.ColorModeCleanCut = ColorModeCleanCut
+
 
 function ColorModeCyberWarfare(){
-  console.log("Cyberwarfare")
+  $(".text-black").removeClass("text-black").addClass("text-[#9ff800]")
+  $(".bg-white").removeClass("bg-white").addClass("bg-black")
+  $(".bg-yellow-400").removeClass("bg-yellow-400").addClass("bg-[#df179e]")
+  $(".text-white").removeClass("text-white").addClass("text-[#df179e]")
+  ActivateMeshCyberWarfare();
 }
+window.ColorModeCyberWarfare = ColorModeCyberWarfare
 
 function ColorModeLuxe(){
   console.log("Luxe")
 }
+window.ColorModeLuxe = ColorModeLuxe
 
 
 // PROJECT CAROUSEL FLICKITY
