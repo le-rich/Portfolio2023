@@ -1,4 +1,4 @@
-import { ActivateMeshCyberWarfare } from './3d.js'
+import { ActivateMeshCleanCut, ActivateMeshCyberWarfare } from './3d.js'
 
 
 // CURSOR
@@ -42,34 +42,67 @@ window.onscroll = function() {
 }
 
 // COLOR CHANGE SELECTORS
-var accentColor = ""
-var foregroundColor = "bg-black"
-var backgroundColor = "bg-white"
-var textMainColor = "text-black"
-var textAltColor = "text-white"
+var prevColorTheme = {
+  accentColor : "",
+  foregroundColor: "",
+  backgroundColor: "",
+  textMainColor: "",
+  textAltColor: "" 
+}
 
+var currColorTheme = {
+  accentColor : "bg-yellow-400",
+  foregroundColor: "bg-black",
+  backgroundColor: "bg-white",
+  textMainColor: "text-black",
+  textAltColor: "text-white",
+}
 
 
 function ColorModeCleanCut(){
   console.log("Superclean")
+  ActivateMeshCleanCut();
 }
 window.ColorModeCleanCut = ColorModeCleanCut
 
 
 function ColorModeCyberWarfare(){
-  $(".text-black").removeClass("text-black").addClass("text-[#9ff800]")
-  $(".bg-white").removeClass("bg-white").addClass("bg-black")
-  $(".bg-yellow-400").removeClass("bg-yellow-400").addClass("bg-[#df179e]")
-  $(".text-white").removeClass("text-white").addClass("text-[#df179e]")
+  SetCyberWarfareColors();
   ActivateMeshCyberWarfare();
+  SwapColors();
+}
+
+function SetPrevColorThemeFromPrevious(){
+  prevColorTheme.textMainColor = currColorTheme.textMainColor;
+  prevColorTheme.textAltColor = currColorTheme.textAltColor;
+  prevColorTheme.backgroundColor = currColorTheme.backgroundColor;
+  prevColorTheme.foregroundColor = currColorTheme.foregroundColor;
+  prevColorTheme.accentColor = currColorTheme.accentColor;
 }
 
 function SetCyberWarfareColors(){
-  textMainColor = "text-[#9ff800]";
-  textAltColor = "text-[#df179e]";
-  foregroundColor = "bg-black";
-  backgroundColor = "bg-[#df179e]";
+  SetPrevColorThemeFromPrevious();
+
+  currColorTheme.textMainColor = "text-[#9ff800]";
+  currColorTheme.textAltColor = "text-[#df179e]";
+  currColorTheme.foregroundColor = "bg-black";
+  currColorTheme.backgroundColor = "bg-black";
+  currColorTheme.accentColor = "bg-[#df179e]";
 }
+
+function SwapColors(){
+  console.log(prevColorTheme)
+  console.log(currColorTheme)
+  $("." + prevColorTheme.accentColor).removeClass(prevColorTheme.accentColor).addClass(currColorTheme.accentColor)
+  $("." + prevColorTheme.textMainColor).removeClass(prevColorTheme.textMainColor).addClass(currColorTheme.textMainColor)
+  $("." + prevColorTheme.backgroundColor).removeClass(prevColorTheme.backgroundColor).addClass(currColorTheme.backgroundColor)
+  $("." + prevColorTheme.foregroundColor).removeClass(prevColorTheme.foregroundColor).addClass(currColorTheme.foregroundColor)
+
+  $("." + prevColorTheme.textAltColor).removeClass(prevColorTheme.textAltColor).addClass(currColorTheme.textAltColor)
+}
+
+
+
 window.ColorModeCyberWarfare = ColorModeCyberWarfare
 
 function ColorModeLuxe(){

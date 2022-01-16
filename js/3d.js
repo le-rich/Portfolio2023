@@ -40,12 +40,25 @@ loader.load(
 	}
 )
 
+// Materials for switching
+const CleanCutMat = new THREE.MeshBasicMaterial({
+    color: 0x000000,
+    wireframe: false,
+});
+
+const CyberWarfareMat = new THREE.MeshBasicMaterial({
+    color: 0x00ff00,
+    wireframe: true,
+});
+
 
 export function ActivateMeshCyberWarfare() {
-    daggerMesh.material = new THREE.MeshBasicMaterial({
-        color: 0x00ff00,
-        wireframe: true
-    });
+    daggerMesh.material = CyberWarfareMat;
+    daggerMesh.material.needsUpdate = true;
+}
+
+export function ActivateMeshCleanCut(){
+    daggerMesh.material = CleanCutMat;
     daggerMesh.material.needsUpdate = true;
 }
 
