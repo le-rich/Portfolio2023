@@ -42,6 +42,13 @@ window.onscroll = function() {
 }
 
 // COLOR CHANGE SELECTORS
+var accentColor = ""
+var foregroundColor = "bg-black"
+var backgroundColor = "bg-white"
+var textMainColor = "text-black"
+var textAltColor = "text-white"
+
+
 
 function ColorModeCleanCut(){
   console.log("Superclean")
@@ -55,6 +62,13 @@ function ColorModeCyberWarfare(){
   $(".bg-yellow-400").removeClass("bg-yellow-400").addClass("bg-[#df179e]")
   $(".text-white").removeClass("text-white").addClass("text-[#df179e]")
   ActivateMeshCyberWarfare();
+}
+
+function SetCyberWarfareColors(){
+  textMainColor = "text-[#9ff800]";
+  textAltColor = "text-[#df179e]";
+  foregroundColor = "bg-black";
+  backgroundColor = "bg-[#df179e]";
 }
 window.ColorModeCyberWarfare = ColorModeCyberWarfare
 
