@@ -51,17 +51,18 @@ var prevColorTheme = {
 }
 
 var currColorTheme = {
+  textMainColor : "text-black",
+  textAltColor : "text-white",
+  foregroundColor : "bg-neutral-900",
+  backgroundColor : "bg-white",
   accentColor : "bg-yellow-400",
-  foregroundColor: "bg-black",
-  backgroundColor: "bg-white",
-  textMainColor: "text-black",
-  textAltColor: "text-white",
 }
 
 
 function ColorModeCleanCut(){
-  console.log("Superclean")
+  SetCleanCutColors();
   ActivateMeshCleanCut();
+  SwapColors();
 }
 window.ColorModeCleanCut = ColorModeCleanCut
 
@@ -72,7 +73,7 @@ function ColorModeCyberWarfare(){
   SwapColors();
 }
 
-function SetPrevColorThemeFromPrevious(){
+function SetPrevColorThemeValues(){
   prevColorTheme.textMainColor = currColorTheme.textMainColor;
   prevColorTheme.textAltColor = currColorTheme.textAltColor;
   prevColorTheme.backgroundColor = currColorTheme.backgroundColor;
@@ -81,24 +82,32 @@ function SetPrevColorThemeFromPrevious(){
 }
 
 function SetCyberWarfareColors(){
-  SetPrevColorThemeFromPrevious();
+  SetPrevColorThemeValues();
 
-  currColorTheme.textMainColor = "text-[#9ff800]";
-  currColorTheme.textAltColor = "text-[#df179e]";
-  currColorTheme.foregroundColor = "bg-black";
+  currColorTheme.textMainColor = "text-lime-500";
+  currColorTheme.textAltColor = "text-pink-600";
+  currColorTheme.foregroundColor = "bg-zinc-900";
   currColorTheme.backgroundColor = "bg-black";
-  currColorTheme.accentColor = "bg-[#df179e]";
+  currColorTheme.accentColor = "bg-fuchsia-600";
+}
+
+function SetCleanCutColors(){
+  SetPrevColorThemeValues();
+  
+  currColorTheme.textMainColor = "text-black";
+  currColorTheme.textAltColor = "text-white";
+  currColorTheme.foregroundColor = "bg-neutral-900";
+  currColorTheme.backgroundColor = "bg-white";
+  currColorTheme.accentColor = "bg-yellow-400";
 }
 
 function SwapColors(){
-  console.log(prevColorTheme)
-  console.log(currColorTheme)
-  $("." + prevColorTheme.accentColor).removeClass(prevColorTheme.accentColor).addClass(currColorTheme.accentColor)
-  $("." + prevColorTheme.textMainColor).removeClass(prevColorTheme.textMainColor).addClass(currColorTheme.textMainColor)
-  $("." + prevColorTheme.backgroundColor).removeClass(prevColorTheme.backgroundColor).addClass(currColorTheme.backgroundColor)
-  $("." + prevColorTheme.foregroundColor).removeClass(prevColorTheme.foregroundColor).addClass(currColorTheme.foregroundColor)
 
+  $("." + prevColorTheme.textMainColor).removeClass(prevColorTheme.textMainColor).addClass(currColorTheme.textMainColor)
+  $("." + prevColorTheme.foregroundColor).removeClass(prevColorTheme.foregroundColor).addClass(currColorTheme.foregroundColor)
+  $("." + prevColorTheme.backgroundColor).removeClass(prevColorTheme.backgroundColor).addClass(currColorTheme.backgroundColor)
   $("." + prevColorTheme.textAltColor).removeClass(prevColorTheme.textAltColor).addClass(currColorTheme.textAltColor)
+  $("." + prevColorTheme.accentColor).removeClass(prevColorTheme.accentColor).addClass(currColorTheme.accentColor)
 }
 
 
