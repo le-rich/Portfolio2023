@@ -66,7 +66,7 @@ float cnoise(vec2 P)
 void main()
 {
     // Pattern 50
-    float strength = distance(vUv, vec2(0.5));
+    float strength = 1.0 - (vUv.y + 0.4);
 
     // Final color
     vec3 blackColor = vec3(0.0);
