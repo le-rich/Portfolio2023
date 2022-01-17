@@ -1,8 +1,9 @@
 import * as THREE from 'https://cdn.skypack.dev/-/three-full@v28.0.2-vXctAfDjnTFinuDDLbIh/dist=es2019,mode=imports/optimized/three-full.js'
 import { OBJLoader } from 'https://cdn.skypack.dev/-/three-full@v28.0.2-vXctAfDjnTFinuDDLbIh/dist=es2019,mode=imports/optimized/three-full.js'
 
-import cleanfragmentGlsl from '../assets/shader/cleanfragment.glsl.js'
-import cleanvertexGlsl from '../assets/shader/cleanvertex.glsl.js'
+import luxefragment from '../assets/shader/luxefragment.glsl.js'
+import cleanfragment from '../assets/shader/cleanfragment.glsl.js'
+import cleanvertex from '../assets/shader/cleanvertex.glsl.js'
 
 /**
  * Base
@@ -19,7 +20,7 @@ const loader = new OBJLoader();
 let daggerGroup = new THREE.Group()
 let daggerMesh = null;
 loader.load(
-    '../assets/3d/daggerhighres.obj',
+    '../assets/3d/daggerhighres-seamless.obj',
     function (object){
         object.rotation.x = Math.PI / 2
         object.children[0].scale.set(12,12,12)
@@ -45,8 +46,8 @@ loader.load(
 
 // Materials for switching
 const CleanCutMat = new THREE.ShaderMaterial({
-    vertexShader : cleanvertexGlsl,
-    fragmentShader: cleanfragmentGlsl,
+    vertexShader : cleanvertex,
+    fragmentShader: cleanfragment,
     uniforms:
     {
         uFrequency: { value: new THREE.Vector2(15, 15) },

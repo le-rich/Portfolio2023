@@ -86,7 +86,7 @@ function SetCyberWarfareColors(){
 
   currColorTheme.textMainColor = "text-lime-500";
   currColorTheme.textAltColor = "text-pink-600";
-  currColorTheme.foregroundColor = "bg-zinc-900";
+  currColorTheme.foregroundColor = "bg-slate-900";
   currColorTheme.backgroundColor = "bg-black";
   currColorTheme.accentColor = "bg-fuchsia-600";
 }
