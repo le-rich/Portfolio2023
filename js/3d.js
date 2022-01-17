@@ -1,6 +1,8 @@
 import * as THREE from 'https://cdn.skypack.dev/-/three-full@v28.0.2-vXctAfDjnTFinuDDLbIh/dist=es2019,mode=imports/optimized/three-full.js'
 import { OBJLoader } from 'https://cdn.skypack.dev/-/three-full@v28.0.2-vXctAfDjnTFinuDDLbIh/dist=es2019,mode=imports/optimized/three-full.js'
 
+import cleanfragmentGlsl from '../assets/shader/cleanfragment.glsl.js'
+import cleanvertexGlsl from '../assets/shader/cleanvertex.glsl.js'
 
 /**
  * Base
@@ -23,6 +25,7 @@ loader.load(
         object.children[0].scale.set(12,12,12)
         object.position.set(2.5,0, -0.5)
         daggerMesh = object.children[0];
+        daggerMesh.material = CleanCutMat
         daggerGroup = object
         scene.add(object);
     },
@@ -41,9 +44,14 @@ loader.load(
 )
 
 // Materials for switching
-const CleanCutMat = new THREE.MeshBasicMaterial({
-    color: 0x000000,
-    wireframe: false,
+const CleanCutMat = new THREE.ShaderMaterial({
+    vertexShader : cleanvertexGlsl,
+    fragmentShader: cleanfragmentGlsl,
+    uniforms:
+    {
+        uFrequency: { value: new THREE.Vector2(15, 15) },
+        uTime: { value: 0 }
+    }
 });
 
 const CyberWarfareMat = new THREE.MeshBasicMaterial({
@@ -130,6 +138,8 @@ const tick = () =>
     daggerGroup.position.y = (Math.sin(elapsedTime) / 4) + 0.45
 
 
+    // Update material
+    CleanCutMat.uniforms.uTime.value = elapsedTime
 
     // Call tick again on the next frame
     window.requestAnimationFrame(tick)
