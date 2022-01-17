@@ -4,6 +4,8 @@ import { OBJLoader } from 'https://cdn.skypack.dev/-/three-full@v28.0.2-vXctAfDj
 import luxefragment from '../assets/shader/luxefragment.glsl.js'
 import cleanfragment from '../assets/shader/cleanfragment.glsl.js'
 import cleanvertex from '../assets/shader/cleanvertex.glsl.js'
+import cyberfragment from '../assets/shader/cyberfragment.glsl.js'
+import cybervertex from '../assets/shader/cybervertex.glsl.js'
 
 /**
  * Base
@@ -55,8 +57,9 @@ const CleanCutMat = new THREE.ShaderMaterial({
     }
 });
 
-const CyberWarfareMat = new THREE.MeshBasicMaterial({
-    color: 0x00ff00,
+const CyberWarfareMat = new THREE.ShaderMaterial({
+    vertexShader: cybervertex,
+    fragmentShader: cyberfragment,
     wireframe: true,
 });
 
