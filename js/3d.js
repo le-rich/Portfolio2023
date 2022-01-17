@@ -19,7 +19,7 @@ const loader = new OBJLoader();
 let daggerGroup = new THREE.Group()
 let daggerMesh = null;
 loader.load(
-    '../assets/3d/dagger.obj',
+    '../assets/3d/daggerhighres.obj',
     function (object){
         object.rotation.x = Math.PI / 2
         object.children[0].scale.set(12,12,12)
