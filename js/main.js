@@ -25,6 +25,11 @@ $("#richard-info-circle").mouseleave(function(){
   $("#infotainer").fadeOut();
 });
 
+function ToggleArchiveVisibility (projectDOMId){
+  $(projectDOMId).toggleClass("hidden");
+}
+window.ToggleArchiveVisibility = ToggleArchiveVisibility
+
 // NAV HEADER ELEMENTS HIDE ON SCROLL
 var prevScrollpos = window.pageYOffset;
 
@@ -170,3 +175,4 @@ window.addEventListener('load', (event) => {
   $("#top-navbar").css("top", "0px");
   $("#color-switcher").css("right", "0");
 });
+

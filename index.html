@@ -283,8 +283,8 @@
                 <div class="mx-8 text-left text-5xl font-monument">
                     <ul class="mb-32 uppercase">
                         <li>
-                            <button class="tracking-widest">ECOCITY: THE GAME<sub class="font-space-mono text-xs">2019</sub></button>
-                            <div class="my-4 w-full hidden">
+                            <button onclick="ToggleArchiveVisibility('#ecocity-archive')" class="tracking-widest">ECOCITY: THE GAME<sub class="font-space-mono text-xs">2019</sub></button>
+                            <div id="ecocity-archive" class="my-4 w-full hidden">
                                 <div class=" flex flex-col shrink space-y-4 place-items-center mx-40">
                                     <video style="width: 66%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
                                         <source src="assets/mp4/ecocity_trim.mp4" type="video/mp4">
@@ -301,8 +301,8 @@
                         </li>
                         <hr class="my-4 bg-white opacity-20">
                         <li>
-                            <button class="tracking-widest">CANARY<sub class="font-space-mono text-xs">2019</sub></button>
-                            <div class="my-4 w-full hidden">
+                            <button onclick="ToggleArchiveVisibility('#canary-archive')"  class="tracking-widest">CANARY<sub class="font-space-mono text-xs">2019</sub></button>
+                            <div id="canary-archive" class="my-4 w-full hidden">
                                 <div class=" flex flex-col shrink space-y-4 place-items-center mx-40">
                                     <video style="width: 66%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
                                         <source src="assets/img/web/canary.mp4" type="video/mp4">
@@ -312,8 +312,8 @@
                         </li>
                         <hr class="my-4 bg-white opacity-20">
                         <li>
-                            <button class="tracking-widest">SUNSEEKER<sub class="font-space-mono text-xs">2019</sub></button>
-                            <div class="my-4 w-full hidden">
+                            <button onclick="ToggleArchiveVisibility('#sunseeker-archive')"  class="tracking-widest">SUNSEEKER<sub class="font-space-mono text-xs">2019</sub></button>
+                            <div id="sunseeker-archive" class="my-4 w-full hidden">
                                 <div class=" flex flex-col shrink space-y-4 place-items-center mx-40">
                                     <video style="width: 66%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
                                         <source src="assets/mp4/sunseeker.mp4" type="video/mp4">
@@ -328,15 +328,56 @@
                         </li>
                         <hr class="my-4 bg-white opacity-20">
                         <li>
-                            <button class="tracking-widest">ARBOREAL<sub class="font-space-mono text-xs">2018</sub></button>
+                            <button onclick="ToggleArchiveVisibility('#arboreal-archive')" class="tracking-widest">ARBOREAL<sub class="font-space-mono text-xs">2018</sub></button>
+                            <div id="arboreal-archive" class="my-4 w-full hidden">
+                                <div class=" flex flex-col shrink space-y-4 place-items-center mx-40">
+                                    <img style="width: 50%;" src="assets/img/ar/hololens.jpg">
+                                    <div class="flex shrink space-x-4 my-4">
+                                        <img style="width: 50%;" src="assets/img/ar/researchers.jpg">
+                                        <img style="width: 50%;" src="assets/img/ar/wood.jpg">
+                                    </div>
+                                </div>
+                            </div>
+
                         </li>
                         <hr class="my-4 bg-white opacity-20">
                         <li>
-                            <button class="tracking-widest">MIDNIGHT CROWN<sub class="font-space-mono text-xs">2018</sub></button>
+                            <button onclick="ToggleArchiveVisibility('#midnight-archive')" class="tracking-widest">MIDNIGHT CROWN<sub class="font-space-mono text-xs">2018</sub></button>
+                            <div id="midnight-archive" class="my-4 w-full hidden">
+                                <div class="flex flex-col shrink space-y-4 place-items-center mx-40">
+                                    <video style="width: 66%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
+                                        <source src="assets/mp4/classified.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="flex shrink space-x-4 my-4">
+                                        <video style="height: 250px;" preload="none" loop="loop" muted="muted" autoplay playsinline
+                                            webkit-playsinline>
+                                            <source src="assets/mp4/zoomzoom.mp4" type="video/mp4" autoplay playsinline webkit-playsinline>
+                                        </video>
+                                        <video style="height: 250px;" preload="none" loop="loop" muted="muted" autoplay playsinline
+                                            webkit-playsinline>
+                                            <source src="assets/mp4/pewpew.mp4" type="video/mp4" autoplay playsinline webkit-playsinline>
+                                        </video>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                         
                         </li>
                         <hr class="my-4 bg-white opacity-20">
                         <li>
-                            <button class="tracking-widest">ROASTED<sub class="font-space-mono text-xs">2017</sub></button>
+                            <button onclick="ToggleArchiveVisibility('#roasted-archive')" class="tracking-widest">ROASTED<sub class="font-space-mono text-xs">2017</sub></button>
+                            <div id="midnight-archive" class="my-4 w-full hidden">
+                                <div id="roasted-archive" class=" flex flex-col shrink space-y-4 place-items-center mx-40">
+                                    <video style="width: 66%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
+                                        <source src="assets/mp4/roasted.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="flex shrink space-x-4 my-4">
+                                        <img style="width: 50%;" src="assets/img/roasted/roasted-preview.png">
+                                        <img style="width: 50%;" src="assets/img/roasted/roasted-lose.png">
+                                    </div>
+    
+                                </div>
+                            </div>
                         </li>
                         <hr class="my-4 bg-white opacity-20">
                     </ul>
