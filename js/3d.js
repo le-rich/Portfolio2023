@@ -1,5 +1,5 @@
 import * as THREE from 'https://cdn.skypack.dev/-/three-full@v28.0.2-vXctAfDjnTFinuDDLbIh/dist=es2019,mode=imports/optimized/three-full.js'
-import { OBJLoader } from 'https://cdn.skypack.dev/-/three-full@v28.0.2-vXctAfDjnTFinuDDLbIh/dist=es2019,mode=imports/optimized/three-full.js'
+import { OBJLoader, TextureLoader } from 'https://cdn.skypack.dev/-/three-full@v28.0.2-vXctAfDjnTFinuDDLbIh/dist=es2019,mode=imports/optimized/three-full.js'
 
 import luxefragment from '../assets/shader/luxefragment.glsl.js'
 import cleanfragment from '../assets/shader/cleanfragment.glsl.js'
@@ -12,6 +12,7 @@ import cybervertex from '../assets/shader/cybervertex.glsl.js'
  */
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
+const textureLoader = new THREE.TextureLoader();
 
 // Scene
 const scene = new THREE.Scene()
@@ -63,6 +64,10 @@ const CyberWarfareMat = new THREE.ShaderMaterial({
     wireframe: true,
 });
 
+const luxematcap = textureLoader.load('../assets/img/matcap-128px.png')
+const LuxeMat = new THREE.MeshMatcapMaterial();
+LuxeMat.matcap = luxematcap;
+
 
 export function ActivateMeshCyberWarfare() {
     daggerMesh.material = CyberWarfareMat;
@@ -71,6 +76,11 @@ export function ActivateMeshCyberWarfare() {
 
 export function ActivateMeshCleanCut(){
     daggerMesh.material = CleanCutMat;
+    daggerMesh.material.needsUpdate = true;
+}
+
+export function ActivateMeshLuxe(){
+    daggerMesh.material = LuxeMat;
     daggerMesh.material.needsUpdate = true;
 }
 

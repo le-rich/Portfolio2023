@@ -1,4 +1,4 @@
-import { ActivateMeshCleanCut, ActivateMeshCyberWarfare } from './3d.js'
+import { ActivateMeshCleanCut, ActivateMeshCyberWarfare, ActivateMeshLuxe } from './3d.js'
 
 
 // CURSOR
@@ -77,6 +77,16 @@ function ColorModeCyberWarfare(){
   ActivateMeshCyberWarfare();
   SwapColors();
 }
+window.ColorModeCyberWarfare = ColorModeCyberWarfare
+
+
+
+function ColorModeLuxe(){
+  SetLuxeColors();
+  ActivateMeshLuxe();
+  SwapColors();
+}
+window.ColorModeLuxe = ColorModeLuxe
 
 function SetPrevColorThemeValues(){
   prevColorTheme.textMainColor = currColorTheme.textMainColor;
@@ -106,6 +116,16 @@ function SetCleanCutColors(){
   currColorTheme.accentColor = "bg-yellow-400";
 }
 
+function SetLuxeColors(){
+  SetPrevColorThemeValues();
+  
+  currColorTheme.textMainColor = "text-blue-900";
+  currColorTheme.textAltColor = "text-amber-50";
+  currColorTheme.foregroundColor = "bg-stone-900";
+  currColorTheme.backgroundColor = "bg-rose-200";
+  currColorTheme.accentColor = "bg-rose-500";
+}
+
 function SwapColors(){
 
   $("." + prevColorTheme.textMainColor).removeClass(prevColorTheme.textMainColor).addClass(currColorTheme.textMainColor)
@@ -117,12 +137,6 @@ function SwapColors(){
 
 
 
-window.ColorModeCyberWarfare = ColorModeCyberWarfare
-
-function ColorModeLuxe(){
-  console.log("Luxe")
-}
-window.ColorModeLuxe = ColorModeLuxe
 
 
 // PROJECT CAROUSEL FLICKITY
