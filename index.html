@@ -19,9 +19,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Richard Le - Software Developer</title>
 </head>
-<body class="bg-white -z-51">
+<body class="bg-white">
     <canvas class="webgl -z-20"></canvas>
-    <header class="fixed w-full mt-5 h-16 uppercase text-black">
+    <header class="fixed w-full mt-5 h-16 uppercase text-black -z-20">
         <nav id="top-navbar" class="transition-transform duration-300 relative flex flex-row items-center justify-between mx-14 text-2xl font-bold">
             <a href="https://richard-le.com" class="p-5">RL</a>
             <ul class="flex flex-row">
@@ -36,7 +36,7 @@
                 </li>
             </ul>
         </nav>
-        <div id="color-switcher" class="transition-transform  duration-300 fixed z-20 bottom-0 right-0 rotate-90 z-9 -mx-40 mb-44">
+        <div id="color-switcher" class="transition-transform  duration-300 fixed z-20 bottom-0 right-0 lg:rotate-90 z-9 lg:-mx-40 lg:mb-44 mb-14">
             <ul class="flex flex-row p-4">
                 <li class="">
                     <button onclick="ColorModeLuxe()" class="p-5">LUXE</button>
@@ -85,7 +85,7 @@
         </div>
     </div>
     <div id="landing" class="container flex flex-col w-screen h-screen z-50 text-black">
-        <div class="flex flex-col grow justify-center content-end h-screen h-96 mx-24  pt-20">
+        <div class="flex flex-col grow justify-center content-end h-screen h-96 lg:mx-24 mx-8 pt-20">
             <h1 class="lg:text-2xl font-light">THE SOFTWARE DEVELOPER KNOWN AS</h1>
             <span class="flex flex-row">
                 <h1 class="tracking-wider font-bold text-6xl md:text-9xl">RICHARD LE</h1>
@@ -126,7 +126,7 @@
             </div>
         </div>
     </div>
-    <div id="projects-container" class="bg-neutral-900 w-full z-100">
+    <div id="projects-container" class="bg-neutral-900 opacity-100 w-full z-1000">
         <div id="project-inspector" class="w-100 h-full relative text-white place-content-end flex flex-col z-100">
             <p class="mt-2 mx-8 mb-2">FEATURED WORKS</p>
             <hr class="mb-8 mx-8 bg-white opacity-20">
@@ -400,8 +400,8 @@
             </div>
         </div>
     </div>
-    <div id="skillmap-container" class="w-full h-screen">
-        <div id="skillmap-inspector" class=" align-middle sm:mx-44 lg:mx-56 pt-14 w-100 h-100 grid grid-flow-col auto-cols max text-black">
+    <div id="skillmap-container" class="w-full h-full">
+        <div id="skillmap-inspector" class=" align-middle sm:mx-44 lg:mx-56 py-14 w-100 h-100 grid grid-flow-col auto-cols max text-black">
             <div class="text-left w-2/4">
                 <p class="lg:text-2xl mb-4">
                     I'm Richard, a 24 year-old <b>software developer</b> based in <b>Vancouver, BC</b>.
