@@ -51,7 +51,7 @@ html, body {
 
 #cursorLerp{
     pointer-events: none;
-    position: absolute;
+    position: fixed;
     padding: 0.3rem;
     /* background-color: #a3f509; */
     background-color: white;
