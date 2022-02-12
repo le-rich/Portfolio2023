@@ -42,7 +42,7 @@ loader.load(
 	// called when loading has errors
 	function ( error ) {
 
-		console.log( 'An error happened' );
+		console.log( 'Error Loading Dagger Mesh Occurred' );
 
 	}
 )
@@ -111,6 +111,7 @@ window.addEventListener('resize', () =>
 
     // Update camera
     camera.aspect = sizes.width / sizes.height
+    daggerGroup.position.x = 0 + (camera.aspect * 1.25)
     camera.updateProjectionMatrix()
 
     // Update renderer
