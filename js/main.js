@@ -188,5 +188,13 @@ var flkty4 = new Flickity( elem4, {
 window.addEventListener('load', (event) => {
   $("#top-navbar").css("top", "0px");
   $("#color-switcher").css("right", "0");
+  let isMobile = Math.min(window.screen.width, window.screen.height) < 768 || navigator.userAgent.indexOf("Mobi") > -1;
+  if (isMobile) {
+    $("#mobile-hider").removeClass("hidden");
+    $("cursor-lerp").addClass("hidden");
+  }
 });
 
+$("#mobile-override").click(function(){
+  $("#mobile-hider").addClass("hidden");
+})

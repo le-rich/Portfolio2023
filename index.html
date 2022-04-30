@@ -16,7 +16,7 @@
 <body class="bg-white">
     <div id="swipe-up-revealer" class="bg-black fixed w-screen h-screen slide-out-top"></div>
     <canvas class="webgl -z-20"></canvas>
-    <header class="fixed w-full mt-5 h-16 uppercase text-black">
+    <header class="fixed w-full mt-5 h-16 uppercase text-black -z-15">
         <nav id="top-navbar" class="transition-transform duration-300 relative flex flex-row items-center justify-between mx-14 text-2xl font-bold">
             <a href="https://richard-le.com" class="p-5">RL</a>
             <ul class="flex flex-row">
@@ -31,7 +31,7 @@
                 </li>
             </ul>
         </nav>
-        <div id="color-switcher" class="transition-transform  duration-300 fixed z-20 bottom-0 right-0 lg:rotate-90 z-9 lg:-mx-40 lg:mb-44 mb-14">
+        <div id="color-switcher" class="transition-transform  duration-300 fixed -z-15 bottom-0 right-0 lg:rotate-90 z-9 lg:-mx-40 lg:mb-44 mb-14">
             <ul class="flex flex-row p-4">
                 <li class="">
                     <button onclick="ColorModeLuxe()" class="p-5">LUXE</button>
@@ -121,7 +121,7 @@
             </div>
         </div>
     </div>
-    <div id="projects-container" class="bg-neutral-900 opacity-100 w-full">
+    <div id="projects-container" class="bg-neutral-900 opacity-100 w-full z-10">
         <div id="project-inspector" class="w-100 h-full relative text-white place-content-end flex flex-col">
             <p class="mt-2 mx-8 mb-2">FEATURED WORKS</p>
             <hr class="mb-8 mx-8 bg-white opacity-20">
@@ -467,6 +467,15 @@
                 <a href="https://github.com/le-rich">Github</a>
             </li>
         </ul>
+    </div>
+    <div id="mobile-hider" class="bg-black absolute top-0 w-full h-full hidden">
+        <div class="w-100 h-full flex flex-col items-center align-middle p-auto justify-items-center justify-center">
+            <div class="my-auto mx-20 self-center">
+                <p class="self-center text-white uppercase">Sorry friend,<br><br> looks like you're on a mobile browser. <br><br> This site is best viewed on a Desktop with WebGL enabled!</p>
+                <br><br>
+                <a id="mobile-override" class="text-lime-500 uppercase underline"> >> Whatever dude, take me to the site.</a>
+            </div>
+        </div>
     </div>
     <div id="cursorLerp">
     </div>
