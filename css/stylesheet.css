@@ -8,9 +8,18 @@ html, body {
     padding: 0;
     overflow-x: hidden;
     font-family: 'Space Mono', sans-serif;
+    font-family: 'Akira Expanded', sans-serif;
     scroll-behavior: smooth;
     background-color: transparent;
     box-sizing: border-box; 
+}
+
+.bg-clean-primary{
+  background-color: #dce0e1;
+}
+
+.text-clean-accent{
+  color: #e1013c;
 }
 
 @-ms-viewport{

@@ -27,7 +27,8 @@ loader.load(
     function (object){
         object.rotation.x = Math.PI / 2
         object.children[0].scale.set(12,12,12)
-        object.position.set(2.5,0, -0.5)
+        object.position.set(0,0, -0.5)
+
         daggerMesh = object.children[0];
         daggerMesh.material = CleanCutMat
         daggerGroup = object
@@ -111,7 +112,7 @@ window.addEventListener('resize', () =>
 
     // Update camera
     camera.aspect = sizes.width / sizes.height
-    daggerGroup.position.x = 0 + (camera.aspect * 1.25)
+    // daggerGroup.position.x = 0 + (camera.aspect * 1.25)
     camera.updateProjectionMatrix()
 
     // Update renderer
