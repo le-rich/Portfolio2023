@@ -14,6 +14,10 @@ html, body {
     box-sizing: border-box; 
 }
 
+.bg-header-color {
+  backdrop-filter: blur(20px);
+}
+
 .bg-clean-primary{
   background-color: #dce0e1;
 }
@@ -30,10 +34,6 @@ html, body {
     font-family: 'Warownia', sans-serif;
 }
 
-.font-space-mono{
-    font-family: 'Space Mono', sans-serif;
-}
-
 .font-monument {
     font-family: 'Monument Extended';
 }
@@ -44,6 +44,10 @@ html, body {
 
 .font-receipt{
     font-family: 'Fake Receipt', sans-serif;
+}
+
+.font-jost{
+  font-family: 'Jost*', sans-serif;
 }
 
 /* BACKGROUNDS */
