@@ -59,7 +59,7 @@ var currColorTheme = {
   textMainColor : "text-black",
   textAltColor : "text-white",
   foregroundColor : "bg-neutral-900",
-  backgroundColor : "bg-white",
+  backgroundColor : "bg-clean-primary",
   accentColor : "bg-yellow-400",
 }
 
@@ -112,7 +112,7 @@ function SetCleanCutColors(){
   currColorTheme.textMainColor = "text-black";
   currColorTheme.textAltColor = "text-white";
   currColorTheme.foregroundColor = "bg-neutral-900";
-  currColorTheme.backgroundColor = "bg-white";
+  currColorTheme.backgroundColor = "bg-clean-primary";
   currColorTheme.accentColor = "bg-yellow-400";
 }
 
@@ -127,7 +127,6 @@ function SetLuxeColors(){
 }
 
 function SwapColors(){
-
   $("." + prevColorTheme.textMainColor).removeClass(prevColorTheme.textMainColor).addClass(currColorTheme.textMainColor)
   $("." + prevColorTheme.foregroundColor).removeClass(prevColorTheme.foregroundColor).addClass(currColorTheme.foregroundColor)
   $("." + prevColorTheme.backgroundColor).removeClass(prevColorTheme.backgroundColor).addClass(currColorTheme.backgroundColor)
@@ -189,10 +188,10 @@ window.addEventListener('load', (event) => {
   $("#top-navbar").css("top", "0px");
   $("#color-switcher").css("right", "0");
   let isMobile = Math.min(window.screen.width, window.screen.height) < 768 || navigator.userAgent.indexOf("Mobi") > -1;
-  if (isMobile) {
-    $("#mobile-hider").removeClass("hidden");
-    $("cursor-lerp").addClass("hidden");
-  }
+  // if (isMobile) {
+  //   $("#mobile-hider").removeClass("hidden");
+  //   $("cursor-lerp").addClass("hidden");
+  // }
 });
 
 $("#mobile-override").click(function(){

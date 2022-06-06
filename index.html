@@ -6,33 +6,36 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- Akira Expanded -->
+    <link href="http://fonts.cdnfonts.com/css/akira-expanded" rel="stylesheet">
+    <!-- Jost -->
+    <link href="http://fonts.cdnfonts.com/css/jost" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/fake-receipt" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/space-mono" rel="stylesheet">
     <link rel="stylesheet" href="css/stylesheet.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Richard Le - Software Developer</title>
 </head>
-<body class="bg-white">
+<body class="bg-clean-primary">
     <div id="swipe-up-revealer" class="bg-black fixed w-screen h-screen slide-out-top"></div>
     <canvas class="webgl -z-20"></canvas>
-    <header class="fixed w-full mt-5 h-16 uppercase text-black -z-15">
-        <nav id="top-navbar" class="transition-transform duration-300 relative flex flex-row items-center justify-between mx-14 text-2xl font-bold">
-            <a href="https://richard-le.com" class="p-5">RL</a>
+    <div class="fixed w-full py-5 h-16 uppercase text-black bg-header-color">
+        <div id="top-navbar" class="transition-transform duration-300 relative flex flex-row items-center justify-between mx-14 text-2xl font-bold z-[10000] ">
+            <a href="https://richard-le.com">RL</a>
             <ul class="flex flex-row">
                 <li>
-                    <a href="#projects-container" class="p-5"><span>PROJECTS</span></a>
+                    <a href="#projects-container" class="px-5"><span>PROJECTS</span></a>
                 </li>
                 <li>
-                    <a href="#skillmap-container" class="p-5"><span>SKILLS</span></a>
+                    <a href="#skillmap-container" class="px-5"><span>SKILLS</span></a>
                 </li>
                 <li>
-                    <a href="#contact-container" class="p-5"><span>CONTACT</span></a>
+                    <a href="#contact-container" class="px-5"><span>CONTACT</span></a>
                 </li>
             </ul>
-        </nav>
-        <div id="color-switcher" class="transition-transform  duration-300 fixed -z-15 bottom-0 right-0 lg:rotate-90 z-9 lg:-mx-40 lg:mb-44 mb-14">
-            <ul class="flex flex-row p-4">
+        </div>
+        <!-- <div id="color-switcher" class="transition-transform  duration-300 fixed -z-15 bottom-0 right-0 lg:rotate-90 z-9 lg:-mx-40 lg:mb-44 mb-14">
+            <ul class="flex flex-row p-4 font-jost">
                 <li class="">
                     <button onclick="ColorModeLuxe()" class="p-5">LUXE</button>
                 </li>
@@ -43,22 +46,8 @@
                     <button onclick="ColorModeCleanCut()" class="p-5">CLEAN-CUT</button>
                 </li>                
             </ul>
-        </div>
-        <!-- <div id="socials" class="fixed z-40 mb-5 bottom-0 ml-5">
-            <ul class="p-1 rounded-full bg-black flex flex-row">
-                <li>
-                    <a class="px-2">
-                        <i class="fab fa-inverse fa-github"></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="px-2">
-                        <i class="fab fa-inverse fa-linkedin-in"></i>
-                    </a>
-                </li>
-            </ul>         
         </div> -->
-    </header>
+    </div>
     <div id="infotainer" class="hidden opacity-95 pointer-events-none bg-black absolute top-0 left-0 w-full h-screen ">
         <div class="container flex flex-col m-28 text-white ">
             <h1 class="text-5xl ">richard</h1>
@@ -69,22 +58,13 @@
                 <img width="300px" src="assets/img/artistDepiction.gif" loading="lazy">
                 <p class="mr-auto text-sm text-slate-500">Artist Depiction</p>
             </span>
-            <p class="font-receipt mr-96 text-white">
-                Richard is a versatile, multi-discipline programmer whose areas of operation range from traditional software development, UI/ UX Design, Game Direction, 3D Art, to Writing and Cinematography.
-                <br>
-                <br>
-                He has been observed to enjoy making all manner of digital experience: video games, software, websites.
-                <br>
-                Richard has a love of creative work and does not prescribe to one field or role, instead synthesizing knowledge from every corner of his neural network to create things that could be classified as "wicked sick".
-            </p>
         </div>
     </div>
     <div id="landing" class="container flex flex-col w-screen h-screen -z-50 text-black">
-        <div class="flex flex-col grow justify-center content-end h-screen h-96 lg:mx-24 mx-8 pt-20">
-            <h1 class="lg:text-2xl font-light">THE SOFTWARE DEVELOPER KNOWN AS</h1>
+        <div class="flex flex-col grow justify-center content-end h-screen h-96 lg:mx-32 mx-4 pt-20">
+            <h1 class="tracking-wider lg:text-2xl font-light">THE SOFTWARE DEVELOPER KNOWN AS</h1>
             <span class="flex flex-row">
-                <h1 class="tracking-wider font-bold text-6xl md:text-9xl">RICHARD LE</h1>
-                <i id="richard-info-circle" class="h-12 fas fa-info-circle"></i>
+                <h1 class="tracking-wider font-bold text-6xl md:text-9xl text-clean-accent">RICHARD LE</h1>
             </span>
         </div>
 
@@ -122,71 +102,84 @@
         </div>
     </div>
     <div id="projects-container" class="bg-neutral-900 opacity-100 w-full z-10">
-        <div id="project-inspector" class="w-100 h-full relative text-white place-content-end flex flex-col">
-            <p class="mt-2 mx-8 mb-2">FEATURED WORKS</p>
+        <div id="project-inspector" class="w-100 max-w-7xl h-full relative text-white flex flex-col mx-auto">
+            <p class="mt-2 pt-10 mx-8 mb-2 tracking-wider font-jost">FEATURED WORKS</p>
             <hr class="mb-8 mx-8 bg-white opacity-20">
             <div class="flex flex-col justify-items-center w-full overflow-hidden">
-                <div id="project-featured-hardspace" class="projectSlide my-auto flex justify-between  mx-8 mb-8">
-                    <div class="flex shrink mix-blend-difference lg:flex-col drop-shadow-md">
-                        <div>
-                            <span id="project-title"
-                                class="uppercase tracking-[0.15em] font-monument md:text-2xl lg:text-6xl lg:w-1/2">
+                <div id="project-featured-hardspace" class="projectSlide my-auto justify-between mx-8 mb-8">
+                    <div class="shrink">
+                        <div class="my-4">
+                            <span id="project-title" class="uppercase tracking-[0.15em] font-monument md:text-2xl lg:text-6xl lg:w-1/2">
                                 HARDSPACE: SHIPBREAKER
                             </span>
                             <br>
-                            <span id="project-slugline" class="uppercase leading-7 font-space-mono">BLACKBIRD INTERACTIVE - 2020</span>
+                            <span id="project-slugline" class="uppercase leading-7 font-jost">BLACKBIRD INTERACTIVE - 2020</span>
                         </div>
                     </div>
-                    <p class="text-justify max-w-md ml-14 font-space-mono uppercase">Equipped with cutting-edge salvaging tech, carve & slice spaceships to recover valuable materials. Upgrade your gear to take on more lucrative contracts and pay your billion credits debt to LYNX Corp.</p>
-                    <a class="font-space-mono uppercase mx-20 underline" href="https://store.steampowered.com/app/1161580/Hardspace_Shipbreaker/">Available Now On Steam</a>
+                    <br>
+                    <p class="text-justify max-w-md font-jost">Equipped with cutting-edge salvaging tech, carve & slice
+                        spaceships to recover valuable materials. Upgrade your gear to take on more lucrative contracts and pay your
+                        billion credits debt to LYNX Corp.</p>
+                    <br><br>
+                    <button >
+                        <a class="font-jost uppercase underline"
+                        href="https://store.steampowered.com/app/1161580/Hardspace_Shipbreaker/">Available Now On Steam</a>
+                
+                    </button>
+
+                
+                    <div class="carousel1 h-[540px] w-100">
+                        <div class="carousel-cell">
+                            <div class="text-left my-8">
+                                <video style="max-height: 433px;" preload="none" loop="loop" muted="muted" autoplay playsinline
+                                    webkit-playsinline>
+                                    <source src="assets/mp4/hssb.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="text-left ml-8 my-8">
+                                <img src="assets/img/hssb/s4.jpg" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="text-left ml-8 my-8">
+                                <img src="assets/img/hssb/s3.jpg" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="text-left ml-8 my-8">
+                                <img src="assets/img/hssb/s2.jpg" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="text-left ml-8 my-8">
+                                <img src="assets/img/hssb/s1.jpg" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="carousel1 w-full h-[85vh] inline-block">
-                    <div class="carousel-cell flex flex-col">
-                        <div class="text-left  ml-8 my-8">
-                            <video style="max-height: 100%;" preload="none" loop="loop"  muted="muted" autoplay playsinline webkit-playsinline>
-                                <source src="assets/mp4/hssb.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                    <div class="carousel-cell flex flex-col">
-                        <div class="text-left ml-8 my-8">
-                           <img src="assets/img/hssb/s4.jpg" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="carousel-cell flex flex-col">
-                        <div class="text-left ml-8 my-8">
-                           <img src="assets/img/hssb/s3.jpg" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="carousel-cell flex flex-col">
-                        <div class="text-left ml-8 my-8">
-                           <img src="assets/img/hssb/s2.jpg" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="carousel-cell flex flex-col">
-                        <div class="text-left ml-8 my-8">
-                           <img src="assets/img/hssb/s1.jpg" loading="lazy">
-                        </div>
-                    </div>
-                </div>
+                
             </div>
             <hr class="my-8 mx-8 bg-white opacity-20">
             <div class="flex flex-col justify-items-center w-full overflow-hidden">
-                <div id="project-featured-hardspace" class="projectSlide my-auto flex justify-between  mx-8 mb-8">
-                    <div class="flex shrink  mix-blend-difference flex-col drop-shadow-md z-40">
-                        <div>
+                <div id="project-featured-hardspace" class="projectSlide my-auto justify-between  mx-8 mb-8">
+                    <div class="shrink drop-shadow-md z-40">
+                        <div class="my-4">
                             <span id="project-title"
                                 class="uppercase tracking-[0.15em] font-monument md:text-2xl lg:text-6xl lg:w-1/2">
                                 ROGUE CARRIER
                             </span>
                             <br>
-                            <span id="project-slugline" class="uppercase leading-7 font-space-mono">PERSONAL - 2021</span>
-                        </div>
+                            <span id="project-slugline" class="uppercase leading-7 font-jost">PERSONAL - 2021</span>
+                        </div>                            
                     </div>
-                    <p class="text-justify max-w-md ml-44 font-space-mono uppercase">A Video Game Made for Kajam 2021 in 7 Days. Control the weapon systems of a rogue Aircraft Carrier. Use Weapons and airstrikes to defend yourself against a voracious enemy fleet.</p>
-                    <a class="font-space-mono max-w-sm uppercase mx-20 underline" href="https://lerich.itch.io/rogue-carrier">Available Now On Itch.io</a>
+                    <br>
+                    <p class="text-justify max-w-md font-jost">A Video Game Made for Kajam 2021 in 7 Days. Control the weapon systems of a rogue Aircraft Carrier. Use Weapons and airstrikes to defend yourself against a voracious enemy fleet.</p>
+                    <br><br>
+                    <a class="font-jost max-w-sm uppercase underline" href="https://lerich.itch.io/rogue-carrier">Available Now On Itch.io</a>
                 </div>
-                <div class="carousel2 w-full h-[85vh] inline-block">
+                <div class="carousel2 w-full h-[540px] inline-block">
                     <div class="carousel-cell flex flex-col ">
                         <div class="text-left ml-8 my-8 h-full">
                             <video style="max-height: 100%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
@@ -207,21 +200,23 @@
                 </div>
                 <hr class="my-8 mx-8 bg-white opacity-20">
                 <div class="flex flex-col justify-items-center w-full overflow-hidden">
-                    <div id="project-featured-hardspace" class="projectSlide my-auto flex justify-between  mx-8 mb-8">
-                        <div class="flex shrink mix-blend-difference pr-96 flex-col drop-shadow-md z-40">
+                    <div id="project-featured-hardspace" class="projectSlide my-auto justify-between  mx-8 mb-8">
+                        <div class="shrink pr-96 drop-shadow-md z-40">
                             <div>
                                 <span id="project-title"
                                     class="uppercase tracking-[0.15em] font-monument md:text-2xl lg:text-6xl lg:w-1/2">
                                     EFI
                                 </span>
                                 <br>
-                                <span id="project-slugline" class="uppercase leading-7 font-space-mono">PERSONAL - 2020</span>
+                                <span id="project-slugline" class="uppercase leading-7 font-jost">PERSONAL - 2020</span>
                             </div>
                         </div>
-                        <p class="text-justify grow max-w-md font-space-mono uppercase">Made in 8 hours for BC Game Jam 2020. Prevail against an onslaught of enemies, fight through the sensory overload to grow your squadron. Use an arsenal of potent weaponry.</p>
-                        <a class="font-space-mono max-w-sm uppercase mx-20 underline">Game Files Lost to Time and Space</a>
+                        <br>
+                        <p class="text-justify grow max-w-md font-jost">Made in 8 hours for BC Game Jam 2020. Prevail against an onslaught of enemies, fight through the sensory overload to grow your squadron. Use an arsenal of potent weaponry.</p>
+                        <br><br>
+                        <a class="font-jost max-w-sm uppercase underline">Game Files Lost to Time and Space</a>
                     </div>
-                    <div class="carousel3 w-full h-[85vh] inline-block">
+                    <div class="carousel3 w-full h-[35vh] inline-block">
                         <div class="carousel-cell flex flex-col ">
                             <div class="text-left ml-8 my-8 h-full">
                                 <video style="max-height: 100%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
@@ -243,39 +238,41 @@
                 </div>
                 <hr class="my-8 mx-8 bg-white opacity-20">
                 <div class="flex flex-col justify-items-center w-full overflow-hidden">
-                    <div id="project-featured-hardspace" class="projectSlide my-auto flex justify-between  mx-8 mb-8">
+                    <div id="project-featured-hardspace" class="projectSlide my-auto justify-between  mx-8 mb-8">
                         <div class="flex shrink mix-blend-difference pr-96 flex-col drop-shadow-md z-40">
                             <div>
                                 <span id="project-title" class="uppercase tracking-[0.15em] font-monument md:text-2xl lg:text-6xl lg:w-1/2">
                                     WEB APPS
                                 </span>
                                 <br>
-                                <span id="project-slugline" class="uppercase leading-7 font-space-mono">HACKATHONS - 2019 - 2020</span>
+                                <span id="project-slugline" class="uppercase leading-7 font-jost">HACKATHONS - 2019 - 2020</span>
                             </div>
                         </div>
-                        <p class="text-justify grow max-w-md font-space-mono uppercase">A multitude of web based products and experiences from both hackathons and personal work that demonstrate full-stack capability.</p>
-                        <a href="https://github.com/le-rich" class="font-space-mono max-w-sm uppercase mx-20 underline">Source Available on Github</a>
+                        <br>
+                        <p class="text-justify grow max-w-md font-jost">A multitude of web based products and experiences from both hackathons and personal work that demonstrate full-stack capability.</p>
+                        <br>
+                        <a href="https://github.com/le-rich" class="font-jost max-w-sm uppercase underline">Source Available on Github</a>
                     </div>
-                    <div class="carousel4 w-full h-[85vh] inline-block">
+                    <div class="carousel4 w-full h-[550px] inline-block">
                         <div class="carousel-cell flex flex-col">
                             <div class="text-left ml-8 my-8">
                                <img src="assets/img/web/vanidi-trim.png">
                             </div>
-                            <p class="ml-8 uppercase">A comprehensive visual interface for City of Vancouver Workers to combine, filter and export data. <br> Use a geographical cropping tool to export all data in selected areas. Export to xlsx, csv or ArcGIS supported file formats.</p>
+                            <p class="ml-8 font-jost">A comprehensive visual interface for City of Vancouver Workers to combine, filter and export data. <br> Use a geographical cropping tool to export all data in selected areas. Export to xlsx, csv or ArcGIS supported file formats.</p>
                         </div>
                         <div class="carousel-cell flex flex-col ">
                             <div class="text-left ml-8 my-8 h-full">
                                 <video style="max-height: 100%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
                                     <source src="assets/img/web/guarden.mp4" type="video/mp4">
                                 </video>
-                                <p class="mt-8  uppercase">Create a garden, add plants, and be reminded when you need to water and pick them next. Taking care of your plants yields you XP for your profile.</p>
+                                <p class="mt-8 font-jost">Create a garden, add plants, and be reminded when you need to water and pick them next. Taking care of your plants yields you XP for your profile.</p>
                             </div>
                         </div>
                         <div class="carousel-cell flex flex-col">
                             <div class="text-left ml-8 my-8 pb-2">
                                <img src="assets/img/web/hypeman.png">
                             </div>
-                            <p class="ml-8 uppercase">A social platform for motivation and energy. Post your daily qualms on a board full of positivity. Readers can 'up-hype' your post and send energy your way.</p>
+                            <p class="ml-8 font-jost">A social platform for motivation and energy. Post your daily qualms on a board full of positivity. Readers can 'up-hype' your post and send energy your way.</p>
                         </div>
 
                         <div class="carousel-cell flex flex-col ">
@@ -283,17 +280,17 @@
                                 <video style="max-height: 100%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
                                     <source src="assets/img/web/arcade.mp4" type="video/mp4">
                                 </video>
-                                <p class="mt-8  uppercase">Reminisce about the good old days of arcade cabinets with a pleasant, informational and responsive web app.</p>
+                                <p class="mt-8 font-jost">Reminisce about the good old days of arcade cabinets with a pleasant, informational and responsive web app.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <p class="mt-8 mx-8 mb-2">ARCHIVE</p>
+                <p class="mt-24 mx-8 mb-2 font-jost">ARCHIVE</p>
                 <hr class="mb-4 mx-8 bg-white opacity-20">
                 <div class="mx-8 text-left md:text-2xl lg:text-6xl font-monument">
                     <ul class="mb-32 uppercase">
                         <li>
-                            <button onclick="ToggleArchiveVisibility('#ecocity-archive')" class="tracking-widest">ECOCITY: THE GAME<sub class="font-space-mono text-xs">2019</sub></button>
+                            <button onclick="ToggleArchiveVisibility('#ecocity-archive')" class="tracking-widest">ECOCITY: THE GAME<sub class="font-jost text-xs">2019</sub></button>
                             <div id="ecocity-archive" class="my-4 w-full hidden">
                                 <div class=" flex flex-col shrink space-y-4 place-items-center mx-40">
                                     <video style="width: 66%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
@@ -311,7 +308,7 @@
                         </li>
                         <hr class="my-4 bg-white opacity-20">
                         <li>
-                            <button onclick="ToggleArchiveVisibility('#canary-archive')"  class="tracking-widest">CANARY<sub class="font-space-mono text-xs">2019</sub></button>
+                            <button onclick="ToggleArchiveVisibility('#canary-archive')"  class="tracking-widest">CANARY<sub class="font-jost text-xs">2019</sub></button>
                             <div id="canary-archive" class="my-4 w-full hidden">
                                 <div class=" flex flex-col shrink space-y-4 place-items-center mx-40">
                                     <video style="width: 66%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
@@ -322,7 +319,7 @@
                         </li>
                         <hr class="my-4 bg-white opacity-20">
                         <li>
-                            <button onclick="ToggleArchiveVisibility('#sunseeker-archive')"  class="tracking-widest">SUNSEEKER<sub class="font-space-mono text-xs">2019</sub></button>
+                            <button onclick="ToggleArchiveVisibility('#sunseeker-archive')"  class="tracking-widest">SUNSEEKER<sub class="font-jost text-xs">2019</sub></button>
                             <div id="sunseeker-archive" class="my-4 w-full hidden">
                                 <div class=" flex flex-col shrink space-y-4 place-items-center mx-40">
                                     <video style="width: 66%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
@@ -338,7 +335,7 @@
                         </li>
                         <hr class="my-4 bg-white opacity-20">
                         <li>
-                            <button onclick="ToggleArchiveVisibility('#arboreal-archive')" class="tracking-widest">ARBOREAL<sub class="font-space-mono text-xs">2018</sub></button>
+                            <button onclick="ToggleArchiveVisibility('#arboreal-archive')" class="tracking-widest">ARBOREAL<sub class="font-jost text-xs">2018</sub></button>
                             <div id="arboreal-archive" class="my-4 w-full hidden">
                                 <div class=" flex flex-col shrink space-y-4 place-items-center mx-40">
                                     <img style="width: 50%;" src="assets/img/ar/hololens.jpg">
@@ -352,7 +349,7 @@
                         </li>
                         <hr class="my-4 bg-white opacity-20">
                         <li>
-                            <button onclick="ToggleArchiveVisibility('#midnight-archive')" class="tracking-widest">MIDNIGHT CROWN<sub class="font-space-mono text-xs">2018</sub></button>
+                            <button onclick="ToggleArchiveVisibility('#midnight-archive')" class="tracking-widest">MIDNIGHT CROWN<sub class="font-jost text-xs">2018</sub></button>
                             <div id="midnight-archive" class="my-4 w-full hidden">
                                 <div class="flex flex-col shrink space-y-4 place-items-center mx-40">
                                     <video style="width: 66%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
@@ -375,7 +372,7 @@
                         </li>
                         <hr class="my-4 bg-white opacity-20">
                         <li>
-                            <button onclick="ToggleArchiveVisibility('#roasted-archive')" class="tracking-widest">ROASTED<sub class="font-space-mono text-xs">2017</sub></button>
+                            <button onclick="ToggleArchiveVisibility('#roasted-archive')" class="tracking-widest">ROASTED<sub class="font-jost text-xs">2017</sub></button>
                             <div id="roasted-archive" class="my-4 w-full hidden">
                                 <div class=" flex flex-col shrink space-y-4 place-items-center mx-40">
                                     <video style="width: 66%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
@@ -396,7 +393,7 @@
         </div>
     </div>
     <div id="skillmap-container" class="w-full h-full">
-        <div id="skillmap-inspector" class=" align-middle sm:mx-44 lg:mx-56 py-14 w-100 h-100 grid grid-flow-col auto-cols max text-black">
+        <div id="skillmap-inspector" class="font-jost align-middle sm:mx-44 lg:mx-56 py-14 w-100 h-100 grid grid-flow-col auto-cols max text-black">
             <div class="text-left w-2/4">
                 <p class="lg:text-2xl mb-4">
                     I'm Richard, a 24 year-old <b>software developer</b> based in <b>Vancouver, BC</b>.
@@ -458,8 +455,8 @@
             <span class="mx-5 text-7xl">SAY HELLO!</span>
         </div>
     </div>
-    <div id="contact-container" class="w-full h-[15vh] bg-neutral-900 text-white">
-        <ul class="ml-8 py-8 space-y-4 uppercase text-md">
+    <div id="contact-container" class="w-full h-full bg-neutral-900 text-white">
+        <ul class="ml-8 py-8 space-y-4 uppercase font-jost text-md">
             <li>
                 <a href="https://www.linkedin.com/in/le-rich/">LinkedIn</a>
             </li>
@@ -477,8 +474,8 @@
             </div>
         </div>
     </div>
-    <div id="cursorLerp">
-    </div>
+    <!-- <div id="cursorLerp">
+    </div> -->
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

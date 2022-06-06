@@ -69,7 +69,7 @@ void main()
     float strength = 1.0 - (vUv.y + 0.4);
 
     // Final color
-    vec3 blackColor = vec3(0.0);
+    vec3 blackColor = vec3(35.0, 34.0, 39.0);
     vec3 uvColor = vec3(vUv, 1.0);
     vec3 mixedColor = mix(blackColor, uvColor, strength);
 

@@ -8,9 +8,22 @@ html, body {
     padding: 0;
     overflow-x: hidden;
     font-family: 'Space Mono', sans-serif;
+    font-family: 'Akira Expanded', sans-serif;
     scroll-behavior: smooth;
     background-color: transparent;
     box-sizing: border-box; 
+}
+
+.bg-header-color {
+  backdrop-filter: blur(20px);
+}
+
+.bg-clean-primary{
+  background-color: #dce0e1;
+}
+
+.text-clean-accent{
+  color: #e1013c;
 }
 
 @-ms-viewport{
@@ -19,10 +32,6 @@ html, body {
 
 .font-warownia{
     font-family: 'Warownia', sans-serif;
-}
-
-.font-space-mono{
-    font-family: 'Space Mono', sans-serif;
 }
 
 .font-monument {
@@ -35,6 +44,10 @@ html, body {
 
 .font-receipt{
     font-family: 'Fake Receipt', sans-serif;
+}
+
+.font-jost{
+  font-family: 'Jost*', sans-serif;
 }
 
 /* BACKGROUNDS */
