@@ -14,6 +14,11 @@ html, body {
     box-sizing: border-box; 
 }
 
+/* inherit height from parent */
+.carousel { height: 100%; }
+
+.carousel-cell { height: 100% }
+
 .bg-header-color {
   backdrop-filter: blur(20px);
 }
