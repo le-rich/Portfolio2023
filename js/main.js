@@ -143,11 +143,13 @@ var elem = document.querySelector('.carousel1');
 var elem2 = document.querySelector('.carousel2');
 var elem3 = document.querySelector('.carousel3');
 var elem4 = document.querySelector('.carousel4');
+var elem5 = document.querySelector('.carousel5');
+
 var flkty = new Flickity( elem, {
   // options
   lazyLoad: true,
   pageDots: false,
-  prevNextButtons: false,
+  prevNextButtons: true,
   draggable: true,
   contain: true,
   freeScroll: true,
@@ -157,7 +159,7 @@ var flkty2 = new Flickity( elem2, {
   // options
   lazyLoad: true,
   pageDots: false,
-  prevNextButtons: false,
+  prevNextButtons: true,
   draggable: true,
   contain: true,
   freeScroll: true,
@@ -167,7 +169,7 @@ var flkty3 = new Flickity( elem3, {
   // options
   lazyLoad: true,
   pageDots: false,
-  prevNextButtons: false,
+  prevNextButtons: true,
   draggable: true,
   contain: true,
   freeScroll: true,
@@ -177,10 +179,31 @@ var flkty4 = new Flickity( elem4, {
   // options
   lazyLoad: true,
   pageDots: false,
-  prevNextButtons: false,
+  prevNextButtons: true,
   draggable: true,
   contain: true,
   freeScroll: true,
+});
+
+var flkty5 = new Flickity( elem5, {
+  // options
+  cellAlign: 'left',
+  lazyLoad: true,
+  pageDots: false,
+  prevNextButtons: true,
+  draggable: true,
+  contain: true,
+  freeScroll: true,
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  var elem = document.querySelector('.carousel5');
+  var flkty = new Flickity(elem, {
+      cellAlign: 'left',
+      contain: true,
+      pageDots: false,
+      wrapAround: false
+  });
 });
 
 // INIT
