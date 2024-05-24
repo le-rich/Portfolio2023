@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <!-- Akira Expanded -->
@@ -20,37 +20,24 @@
     <div id="swipe-up-revealer" class="bg-black fixed w-screen h-screen slide-out-top"></div>
     <canvas class="webgl -z-20"></canvas>
     <div class="fixed w-full py-5 h-16 uppercase text-black bg-header-color">
-        <div id="top-navbar" class="transition-transform duration-300 relative flex flex-row items-center justify-between mx-14 text-2xl font-bold z-[10000] ">
+        <div id="top-navbar" class="transition-transform duration-300 relative flex flex-row items-center justify-between mx-4 sm:mx-14 text-xl sm:text-2xl font-bold z-[10000]">
             <a href="https://richard-le.com">RL</a>
             <ul class="flex flex-row">
                 <li>
-                    <a href="#projects-container" class="px-5"><span>PROJECTS</span></a>
+                    <a href="#projects-container" class="px-2 sm:px-5"><span>PROJECTS</span></a>
                 </li>
                 <li>
-                    <a href="#skillmap-container" class="px-5"><span>SKILLS</span></a>
+                    <a href="#skillmap-container" class="px-2 sm:px-5"><span>SKILLS</span></a>
                 </li>
                 <li>
-                    <a href="#contact-container" class="px-5"><span>CONTACT</span></a>
+                    <a href="#contact-container" class="px-2 sm:px-5"><span>CONTACT</span></a>
                 </li>
             </ul>
         </div>
-        <!-- <div id="color-switcher" class="transition-transform  duration-300 fixed -z-15 bottom-0 right-0 lg:rotate-90 z-9 lg:-mx-40 lg:mb-44 mb-14">
-            <ul class="flex flex-row p-4 font-jost">
-                <li class="">
-                    <button onclick="ColorModeLuxe()" class="p-5">LUXE</button>
-                </li>
-                <li>
-                    <button onclick="ColorModeCyberWarfare()" class="p-5">CYBERWARFARE</button>
-                </li>
-                <li>
-                    <button onclick="ColorModeCleanCut()" class="p-5">CLEAN-CUT</button>
-                </li>                
-            </ul>
-        </div> -->
     </div>
-    <div id="infotainer" class="hidden opacity-95 pointer-events-none bg-black absolute top-0 left-0 w-full h-screen ">
-        <div class="container flex flex-col m-28 text-white ">
-            <h1 class="text-5xl ">richard</h1>
+    <div id="infotainer" class="hidden opacity-95 pointer-events-none bg-black absolute top-0 left-0 w-full h-screen">
+        <div class="container flex flex-col p-8 md:m-28 text-white">
+            <h1 class="text-3xl md:text-5xl">richard</h1>
             <ul>
                 <li class="font-receipt text-slate-500">AKA: Dirk, The Jungle Snake</li>
             </ul>
@@ -62,58 +49,58 @@
     </div>
     <div id="landing" class="container flex flex-col w-screen h-screen -z-50 text-black">
         <div class="flex flex-col grow justify-center content-end h-screen h-96 lg:mx-32 mx-4 pt-20">
-            <h1 class="tracking-wider lg:text-2xl text-clean-accent font-light">THE SOFTWARE DEVELOPER KNOWN AS</h1>
+            <h1 class="tracking-wider text-xl lg:text-2xl text-clean-accent font-light">THE SOFTWARE DEVELOPER KNOWN AS</h1>
             <span class="flex flex-row">
-                <h1 class="tracking-wider font-bold text-6xl md:text-9xl text-clean-accent">RICHARD LE</h1>
+                <h1 class="tracking-wider font-bold text-5xl md:text-7xl lg:text-9xl text-clean-accent">RICHARD LE</h1>
             </span>
         </div>
-
-
         <div class="absolute bottom-0 w-screen mb-8 tracking-wider font-jost">
-            <span class="mx-auto">
-                <button onclick="ColorModeCleanCut()" class="m-4 p-2">CLEAN-CUT</button>
-                <button onclick="ColorModeCyberWarfare()" class="m-4 p-2">CYBERWARFARE</button>
-                <button onclick="ColorModeLuxe()" class="m-4 p-2">LUXE</button>
+            <span class="mx-auto flex flex-wrap justify-center">
+                <button onclick="ColorModeCleanCut()" class="m-2 p-2">CLEAN-CUT</button>
+                <button onclick="ColorModeCyberWarfare()" class="m-2 p-2">CYBERWARFARE</button>
+                <button onclick="ColorModeLuxe()" class="m-2 p-2">LUXE</button>
             </span>
         </div>
         <div class="z-900 absolute bottom-0 w-screen overflow-hidden whitespace-nowrap flex flex-row bg-black bg-yellow-400 text-black py-2">
             <div class="scroll-motion font-monument text-sm">
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
-                <span class="mx-5 tracking-[0.15em] "><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
+                <span class="mx-5 tracking-[0.15em]"><a href="https://www.dirkinteractive.com/">CURRENTLY @ DIRK</a></span>
             </div>
         </div>
     </div>
     <div id="projects-container" class="bg-neutral-900 opacity-100 w-full z-10">
-        <div id="project-inspector" class="w-100 max-w-7xl h-full relative text-white flex flex-col mx-auto">
-            <p class="pt-10 mx-8 mb-2 tracking-wider font-jost">PREVIOUSLY AT</p>
-            <hr class="mb-8 mx-8 bg-white opacity-20">
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-24 mx-16">
+        <div id="project-inspector" class="w-full max-w-7xl h-full relative text-white flex flex-col mx-auto px-4 sm:px-8">
+            <p class="pt-10 mx-2 sm:mx-8 mb-2 tracking-wider font-jost">PREVIOUSLY AT</p>
+            <hr class="mb-8 mx-2 sm:mx-8 bg-white opacity-20">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 sm:gap-12 lg:gap-24 mx-2 sm:mx-16">
                 <a class="invert logo flex items-center justify-center" href="https://www.dneg.com/">
                     <img src="assets/img/logos/DNEG_logo.svg">
                 </a>
@@ -130,36 +117,27 @@
                     <img src="assets/img/logos/ubc.png">
                 </a>
             </div>
-            <p class="mt-2 pt-10 mx-8 mb-2 tracking-wider font-jost">FEATURED WORKS</p>
-            <hr class="mb-8 mx-8 bg-white opacity-20">
+            <p class="mt-2 pt-10 mx-2 sm:mx-8 mb-2 tracking-wider font-jost">FEATURED WORKS</p>
+            <hr class="mb-8 mx-2 sm:mx-8 bg-white opacity-20">
             <div class="flex flex-col justify-items-center w-full overflow-hidden">
-                <div id="project-featured-hardspace" class="projectSlide my-auto justify-between mx-8 mb-8">
+                <div id="project-featured-hardspace" class="projectSlide my-auto justify-between mx-2 sm:mx-8 mb-8">
                     <div class="shrink">
                         <div class="my-4">
-                            <span id="project-title" class="uppercase tracking-[0.15em] font-monument md:text-2xl lg:text-6xl lg:w-1/2">
-                                HARDSPACE: SHIPBREAKER
-                            </span>
+                            <span id="project-title" class="uppercase tracking-[0.15em] font-monument text-xl md:text-2xl lg:text-6xl lg:w-1/2">HARDSPACE: SHIPBREAKER</span>
                             <br>
                             <span id="project-slugline" class="uppercase leading-7 font-jost">BLACKBIRD INTERACTIVE - 2020</span>
                         </div>
                     </div>
                     <br>
-                    <p class="text-justify max-w-md font-jost">Equipped with cutting-edge salvaging tech, carve & slice
-                        spaceships to recover valuable materials. Upgrade your gear to take on more lucrative contracts and pay your
-                        billion credits debt to LYNX Corp.</p>
+                    <p class="text-justify max-w-md font-jost">Equipped with cutting-edge salvaging tech, carve & slice spaceships to recover valuable materials. Upgrade your gear to take on more lucrative contracts and pay your billion credits debt to LYNX Corp.</p>
                     <br><br>
-                    <button >
-                        <a class="font-jost uppercase underline"
-                        href="https://store.steampowered.com/app/1161580/Hardspace_Shipbreaker/">Available Now On Steam</a>
-                
+                    <button>
+                        <a class="font-jost uppercase underline" href="https://store.steampowered.com/app/1161580/Hardspace_Shipbreaker/">Available Now On Steam</a>
                     </button>
-
-                
-                    <div class="carousel1 h-[540px] w-100">
+                    <div class="carousel1 h-[320px] md:h-[540px] w-full">
                         <div class="carousel-cell">
                             <div class="text-left my-8">
-                                <video style="max-height: 433px;" preload="none" loop="loop" muted="muted" autoplay playsinline
-                                    webkit-playsinline>
+                                <video style="max-height: 100%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
                                     <source src="assets/mp4/hssb.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -186,294 +164,274 @@
                         </div>
                     </div>
                 </div>
-                
-            </div>
-            <hr class="my-8 mx-8 bg-white opacity-20">
-            <div class="flex flex-col justify-items-center w-full overflow-hidden">
-                <div id="project-featured-realtime" class="projectSlide my-auto justify-between  mx-8 mb-8">
-                    <div class="shrink drop-shadow-md z-40">
-                        <div class="my-4">
-                            <span id="project-title"
-                                class="uppercase tracking-[0.15em] font-monument md:text-2xl lg:text-6xl lg:w-1/2">
-                                REALTIME CINEMATICS
-                            </span>
-                            <br>
-                            <span id="project-slugline" class="uppercase leading-7 font-jost">VARIOUS - 2022 TO PRESENT</span>
-                        </div>                            
-                    </div>
-                    <br>
-                    <p class="text-justify max-w-md font-jost">Directed and animated realtime cinematics that are played in-engine or rendered out from a realtime source. Often, environments, models and characters are rigged, authored or modified in some way by myself in order to achieve cinematic goals.</p>
-                </div>
-                <div class="carousel2 w-full h-[540px] inline-block">
-                    <div class="carousel-cell flex flex-col ">
-                        <div class="text-left ml-8 my-8 h-full">
-                            <video style="max-height: 100%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
-                                <source src="assets/mp4/cinematicsplashcut.mp4" type="video/mp4">
-                            </video>
+                <hr class="my-8 mx-2 sm:mx-8 bg-white opacity-20">
+                <div class="flex flex-col justify-items-center w-full overflow-hidden">
+                    <div id="project-featured-realtime" class="projectSlide my-auto justify-between mx-2 sm:mx-8 mb-8">
+                        <div class="shrink drop-shadow-md z-40">
+                            <div class="my-4">
+                                <span id="project-title" class="uppercase tracking-[0.15em] font-monument text-xl md:text-2xl lg:text-6xl lg:w-1/2">REALTIME CINEMATICS</span>
+                                <br>
+                                <span id="project-slugline" class="uppercase leading-7 font-jost">VARIOUS - 2022 TO PRESENT</span>
+                            </div>
                         </div>
+                        <br>
+                        <p class="text-justify max-w-md font-jost">Directed and animated realtime cinematics that are played in-engine or rendered out from a realtime source. Often, environments, models and characters are rigged, authored or modified in some way by myself in order to achieve cinematic goals.</p>
                     </div>
-                    <div class="carousel-cell flex flex-col">
-                        <div class="text-left ml-8 my-8">
-                           <img src="assets/img/realtime/Editor.PNG" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="carousel-cell flex flex-col">
-                        <div class="text-left ml-8 my-8">
-                           <img src="assets/img/realtime/Rig.PNG" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr class="my-8 mx-8 bg-white opacity-20">
-            <div class="flex flex-col justify-items-center w-full overflow-hidden">
-                <div id="project-featured-carrier" class="projectSlide my-auto justify-between  mx-8 mb-8">
-                    <div class="shrink drop-shadow-md z-40">
-                        <div class="my-4">
-                            <span id="project-title"
-                                class="uppercase tracking-[0.15em] font-monument md:text-2xl lg:text-6xl lg:w-1/2">
-                                ROGUE CARRIER
-                            </span>
-                            <br>
-                            <span id="project-slugline" class="uppercase leading-7 font-jost">PERSONAL - 2021</span>
-                        </div>                            
-                    </div>
-                    <br>
-                    <p class="text-justify max-w-md font-jost">A Video Game Made for Kajam 2021 in 7 Days. Control the weapon systems of a rogue Aircraft Carrier. Use Weapons and airstrikes to defend yourself against a voracious enemy fleet.</p>
-                    <br><br>
-                    <a class="font-jost max-w-sm uppercase underline" href="https://lerich.itch.io/rogue-carrier">Available Now On Itch.io</a>
-                </div>
-                <div class="carousel3 w-full h-[540px] inline-block">
-                    <div class="carousel-cell flex flex-col ">
-                        <div class="text-left ml-8 my-8 h-full">
-                            <video style="max-height: 100%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
-                                <source src="assets/mp4/Rogue Carrier.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                    <div class="carousel-cell flex flex-col">
-                        <div class="text-left ml-8 my-8">
-                           <img src="assets/img/rogue/r1.PNG" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="carousel-cell flex flex-col">
-                        <div class="text-left ml-8 my-8">
-                           <img src="assets/img/rogue/r2.PNG" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr class="my-8 mx-8 bg-white opacity-20">
-            <div class="flex flex-col justify-items-center w-full overflow-hidden">
-                <div id="project-featured-efi" class="projectSlide my-auto justify-between  mx-8 mb-8">
-                    <div class="shrink pr-96 drop-shadow-md z-40">
-                        <div>
-                            <span id="project-title"
-                                class="uppercase tracking-[0.15em] font-monument md:text-2xl lg:text-6xl lg:w-1/2">
-                                EFI
-                            </span>
-                            <br>
-                            <span id="project-slugline" class="uppercase leading-7 font-jost">PERSONAL - 2020</span>
-                        </div>
-                    </div>
-                    <br>
-                    <p class="text-justify grow max-w-md font-jost">Made in 8 hours for BC Game Jam 2020. Prevail against an onslaught of enemies, fight through the sensory overload to grow your squadron. Use an arsenal of potent weaponry.</p>
-                    <br><br>
-                    <a class="font-jost max-w-sm uppercase underline">Game Files Lost to Time and Space</a>
-                </div>
-                <div class="carousel4 w-full h-[540px] inline-block">
-                    <div class="carousel-cell flex flex-col ">
-                        <div class="text-left ml-8 my-8 h-full">
-                            <video style="max-height: 100%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
-                                <source src="assets/mp4/EFI.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                    <div class="carousel-cell flex flex-col">
-                        <div class="text-left ml-8 my-8">
-                            <img src="assets/img/efi/efi1.jpg" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="carousel-cell flex flex-col">
-                        <div class="text-left ml-8 my-8">
-                            <img src="assets/img/efi/efi2.jpg" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr class="my-8 mx-8 bg-white opacity-20">
-            <div class="flex flex-col justify-items-center w-full overflow-hidden">
-                <div id="project-featured-webapps" class="projectSlide my-auto justify-between  mx-8 mb-8">
-                    <div class="flex shrink mix-blend-difference pr-96 flex-col drop-shadow-md z-40">
-                        <div>
-                            <span id="project-title" class="uppercase tracking-[0.15em] font-monument md:text-2xl lg:text-6xl lg:w-1/2">
-                                WEB APPS
-                            </span>
-                            <br>
-                            <span id="project-slugline" class="uppercase leading-7 font-jost">HACKATHONS - 2019 - 2020</span>
-                        </div>
-                    </div>
-                    <br>
-                    <p class="text-justify grow max-w-md font-jost">A multitude of web based products and experiences from both hackathons and personal work that demonstrate full-stack capability.</p>
-                    <br>
-                    <a href="https://github.com/le-rich" class="font-jost max-w-sm uppercase underline">Source Available on Github</a>
-                </div>
-                <div class="carousel5 w-full h-[550px]">
-                    <div class="carousel-cell flex flex-col">
-                        <div class="text-left ml-8 my-8">
-                            <img src="assets/img/web/vanidi-trim.png">
-                        </div>
-                        <p class="ml-8 font-jost">A comprehensive visual interface for City of Vancouver Workers to combine, filter and export data. <br> Use a geographical cropping tool to export all data in selected areas. Export to xlsx, csv or ArcGIS supported file formats.</p>
-                    </div>
-                    <div class="carousel-cell flex flex-col">
-                        <div class="text-left ml-8 my-8 h-full">
-                            <video style="max-height: 100%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
-                                <source src="assets/img/web/guarden.mp4" type="video/mp4">
-                            </video>
-                            <p class="mt-8 font-jost">Create a garden, add plants, and be reminded when you need to water and pick them next. Taking care of your plants yields you XP for your profile.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-cell flex flex-col">
-                        <div class="text-left ml-8 my-8 pb-2">
-                            <img src="assets/img/web/hypeman.png">
-                        </div>
-                        <p class="ml-8 font-jost">A social platform for motivation and energy. Post your daily qualms on a board full of positivity. Readers can 'up-hype' your post and send energy your way.</p>
-                    </div>
-                    <div class="carousel-cell flex flex-col">
-                        <div class="text-left ml-8 my-8 h-full">
-                            <video style="max-height: 100%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
-                                <source src="assets/img/web/arcade.mp4" type="video/mp4">
-                            </video>
-                            <p class="mt-8 font-jost">Reminisce about the good old days of arcade cabinets with a pleasant, informational and responsive web app.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p class="mt-24 mx-8 mb-2 font-jost">ARCHIVE</p>
-            <hr class="mb-4 mx-8 bg-white opacity-20">
-            <div class="mx-8 text-left md:text-2xl lg:text-6xl font-monument">
-                <ul class="mb-32 uppercase">
-                    <li>
-                        <button onclick="ToggleArchiveVisibility('#ecocity-archive')" class="tracking-widest">ECOCITY: THE GAME<sub class="font-jost text-xs">2019</sub></button>
-                        <div id="ecocity-archive" class="my-4 w-full hidden">
-                            <div class=" flex flex-col shrink space-y-4 place-items-center mx-40">
-                                <video style="width: 66%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
-                                    <source src="assets/mp4/ecocity_trim.mp4" type="video/mp4">
+                    <div class="carousel2 w-full h-[320px] md:h-[540px] inline-block">
+                        <div class="carousel-cell flex flex-col">
+                            <div class="text-left ml-8 my-8 h-full">
+                                <video style="max-height: 100%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
+                                    <source src="assets/mp4/cinematicsplashcut.mp4" type="video/mp4">
                                 </video>
-                                <div class="flex shrink space-x-4 my-4">
-                                    <video style="width: 50%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
-                                        <source src="assets/mp4/pollution.mp4" type="video/mp4" autoplay playsinline webkit-playsinline>
+                            </div>
+                        </div>
+                        <div class="carousel-cell flex flex-col">
+                            <div class="text-left ml-8 my-8">
+                                <img src="assets/img/realtime/Editor.PNG" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="carousel-cell flex flex-col">
+                            <div class="text-left ml-8 my-8">
+                                <img src="assets/img/realtime/Rig.PNG" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-8 mx-2 sm:mx-8 bg-white opacity-20">
+                <div class="flex flex-col justify-items-center w-full overflow-hidden">
+                    <div id="project-featured-carrier" class="projectSlide my-auto justify-between mx-2 sm:mx-8 mb-8">
+                        <div class="shrink drop-shadow-md z-40">
+                            <div class="my-4">
+                                <span id="project-title" class="uppercase tracking-[0.15em] font-monument text-xl md:text-2xl lg:text-6xl lg:w-1/2">ROGUE CARRIER</span>
+                                <br>
+                                <span id="project-slugline" class="uppercase leading-7 font-jost">PERSONAL - 2021</span>
+                            </div>
+                        </div>
+                        <br>
+                        <p class="text-justify max-w-md font-jost">A Video Game Made for Kajam 2021 in 7 Days. Control the weapon systems of a rogue Aircraft Carrier. Use Weapons and airstrikes to defend yourself against a voracious enemy fleet.</p>
+                        <br><br>
+                        <a class="font-jost max-w-sm uppercase underline" href="https://lerich.itch.io/rogue-carrier">Available Now On Itch.io</a>
+                    </div>
+                    <div class="carousel3 w-full h-[320px] md:h-[540px] inline-block">
+                        <div class="carousel-cell flex flex-col">
+                            <div class="text-left ml-8 my-8 h-full">
+                                <video style="max-height: 100%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
+                                    <source src="assets/mp4/Rogue Carrier.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="carousel-cell flex flex-col">
+                            <div class="text-left ml-8 my-8">
+                                <img src="assets/img/rogue/r1.PNG" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="carousel-cell flex flex-col">
+                            <div class="text-left ml-8 my-8">
+                                <img src="assets/img/rogue/r2.PNG" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-8 mx-2 sm:mx-8 bg-white opacity-20">
+                <div class="flex flex-col justify-items-center w-full overflow-hidden">
+                    <div id="project-featured-efi" class="projectSlide my-auto justify-between mx-2 sm:mx-8 mb-8">
+                        <div class="shrink pr-0 sm:pr-96 drop-shadow-md z-40">
+                            <div>
+                                <span id="project-title" class="uppercase tracking-[0.15em] font-monument text-xl md:text-2xl lg:text-6xl lg:w-1/2">EFI</span>
+                                <br>
+                                <span id="project-slugline" class="uppercase leading-7 font-jost">PERSONAL - 2020</span>
+                            </div>
+                        </div>
+                        <br>
+                        <p class="text-justify grow max-w-md font-jost">Made in 8 hours for BC Game Jam 2020. Prevail against an onslaught of enemies, fight through the sensory overload to grow your squadron. Use an arsenal of potent weaponry.</p>
+                        <br><br>
+                        <a class="font-jost max-w-sm uppercase underline">Game Files Lost to Time and Space</a>
+                    </div>
+                    <div class="carousel4 w-full h-[320px] md:h-[540px] inline-block">
+                        <div class="carousel-cell flex flex-col">
+                            <div class="text-left ml-8 my-8 h-full">
+                                <video style="max-height: 100%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
+                                    <source src="assets/mp4/EFI.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="carousel-cell flex flex-col">
+                            <div class="text-left ml-8 my-8">
+                                <img src="assets/img/efi/efi1.jpg" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="carousel-cell flex flex-col">
+                            <div class="text-left ml-8 my-8">
+                                <img src="assets/img/efi/efi2.jpg" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-8 mx-2 sm:mx-8 bg-white opacity-20">
+                <div class="flex flex-col justify-items-center w-full overflow-hidden">
+                    <div id="project-featured-webapps" class="projectSlide my-auto justify-between mx-2 sm:mx-8 mb-8">
+                        <div class="flex shrink mix-blend-difference pr-0 sm:pr-96 flex-col drop-shadow-md z-40">
+                            <div>
+                                <span id="project-title" class="uppercase tracking-[0.15em] font-monument text-xl md:text-2xl lg:text-6xl lg:w-1/2">WEB APPS</span>
+                                <br>
+                                <span id="project-slugline" class="uppercase leading-7 font-jost">HACKATHONS - 2019 - 2020</span>
+                            </div>
+                        </div>
+                        <br>
+                        <p class="text-justify grow max-w-md font-jost">A multitude of web based products and experiences from both hackathons and personal work that demonstrate full-stack capability.</p>
+                        <br>
+                        <a href="https://github.com/le-rich" class="font-jost max-w-sm uppercase underline">Source Available on Github</a>
+                    </div>
+                    <div class="carousel5 w-full h-[320px] md:h-[540px]">
+                        <div class="carousel-cell flex flex-col">
+                            <div class="text-left ml-8 my-8">
+                                <img src="assets/img/web/vanidi-trim.png">
+                            </div>
+                            <p class="ml-8 font-jost">A comprehensive visual interface for City of Vancouver Workers to combine, filter and export data. <br> Use a geographical cropping tool to export all data in selected areas. Export to xlsx, csv or ArcGIS supported file formats.</p>
+                        </div>
+                        <div class="carousel-cell flex flex-col">
+                            <div class="text-left ml-8 my-8 h-full">
+                                <video style="max-height: 100%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
+                                    <source src="assets/img/web/guarden.mp4" type="video/mp4">
+                                </video>
+                                <p class="mt-8 font-jost">Create a garden, add plants, and be reminded when you need to water and pick them next. Taking care of your plants yields you XP for your profile.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-cell flex flex-col">
+                            <div class="text-left ml-8 my-8 pb-2">
+                                <img src="assets/img/web/hypeman.png">
+                            </div>
+                            <p class="ml-8 font-jost">A social platform for motivation and energy. Post your daily qualms on a board full of positivity. Readers can 'up-hype' your post and send energy your way.</p>
+                        </div>
+                        <div class="carousel-cell flex flex-col">
+                            <div class="text-left ml-8 my-8 h-full">
+                                <video style="max-height: 100%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
+                                    <source src="assets/img/web/arcade.mp4" type="video/mp4">
+                                </video>
+                                <p class="mt-8 font-jost">Reminisce about the good old days of arcade cabinets with a pleasant, informational and responsive web app.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-24 mx-2 sm:mx-8 mb-2 font-jost">ARCHIVE</p>
+                <hr class="mb-4 mx-2 sm:mx-8 bg-white opacity-20">
+                <div class="mx-2 sm:mx-8 text-left md:text-2xl lg:text-6xl font-monument">
+                    <ul class="mb-32 uppercase text-left">
+                        <li>
+                            <button onclick="ToggleArchiveVisibility('#ecocity-archive')" class="tracking-widest">ECOCITY: THE GAME<sub class="font-jost text-xs">2019</sub></button>
+                            <div id="ecocity-archive" class="my-4 w-full hidden">
+                                <div class="flex flex-col shrink space-y-4 place-items-center mx-4 md:mx-40">
+                                    <video style="width: 66%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
+                                        <source src="assets/mp4/ecocity_trim.mp4" type="video/mp4">
                                     </video>
-                                    <img style="width: 50%;" src="assets/img/ecocity/bg-masthead.jpg" loading="lazy">
-                                </div>
-
-                            </div>
-                        </div>
-                    </li>
-                    <hr class="my-4 bg-white opacity-20">
-                    <li>
-                        <button onclick="ToggleArchiveVisibility('#canary-archive')"  class="tracking-widest">CANARY<sub class="font-jost text-xs">2019</sub></button>
-                        <div id="canary-archive" class="my-4 w-full hidden">
-                            <div class=" flex flex-col shrink space-y-4 place-items-center mx-40">
-                                <video style="width: 66%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
-                                    <source src="assets/img/web/canary.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                    </li>
-                    <hr class="my-4 bg-white opacity-20">
-                    <li>
-                        <button onclick="ToggleArchiveVisibility('#sunseeker-archive')"  class="tracking-widest">SUNSEEKER<sub class="font-jost text-xs">2019</sub></button>
-                        <div id="sunseeker-archive" class="my-4 w-full hidden">
-                            <div class=" flex flex-col shrink space-y-4 place-items-center mx-40">
-                                <video style="width: 66%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
-                                    <source src="assets/mp4/sunseeker.mp4" type="video/mp4">
-                                </video>
-                                <div class="flex shrink space-x-4 my-4">
-                                    <img style="width: 50%;" src="assets/img/ss/flavorSunseeker.PNG" loading="lazy">
-                                    <img style="width: 50%;" src="assets/img/ss/flavorSunseeker2.PNG" loading="lazy">
-                                </div>
-
-                            </div>
-                        </div>
-                    </li>
-                    <hr class="my-4 bg-white opacity-20">
-                    <li>
-                        <button onclick="ToggleArchiveVisibility('#arboreal-archive')" class="tracking-widest">ARBOREAL<sub class="font-jost text-xs">2018</sub></button>
-                        <div id="arboreal-archive" class="my-4 w-full hidden">
-                            <div class=" flex flex-col shrink space-y-4 place-items-center mx-40">
-                                <img style="width: 50%;" src="assets/img/ar/hololens.jpg">
-                                <div class="flex shrink space-x-4 my-4">
-                                    <img style="width: 50%;" src="assets/img/ar/researchers.jpg" loading="lazy">
-                                    <img style="width: 50%;" src="assets/img/ar/wood.jpg" loading="lazy">
+                                    <div class="flex shrink space-x-4 my-4">
+                                        <video style="width: 50%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
+                                            <source src="assets/mp4/pollution.mp4" type="video/mp4" autoplay playsinline webkit-playsinline>
+                                        </video>
+                                        <img style="width: 50%;" src="assets/img/ecocity/bg-masthead.jpg" loading="lazy">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                    </li>
-                    <hr class="my-4 bg-white opacity-20">
-                    <li>
-                        <button onclick="ToggleArchiveVisibility('#midnight-archive')" class="tracking-widest">MIDNIGHT CROWN<sub class="font-jost text-xs">2018</sub></button>
-                        <div id="midnight-archive" class="my-4 w-full hidden">
-                            <div class="flex flex-col shrink space-y-4 place-items-center mx-40">
-                                <video style="width: 66%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
-                                    <source src="assets/mp4/classified.mp4" type="video/mp4">
-                                </video>
-                                <div class="flex shrink space-x-4 my-4">
-                                    <video style="height: 250px;" preload="none" loop="loop" muted="muted" autoplay playsinline
-                                        webkit-playsinline>
-                                        <source src="assets/mp4/zoomzoom.mp4" type="video/mp4" autoplay playsinline webkit-playsinline>
-                                    </video>
-                                    <video style="height: 250px;" preload="none" loop="loop" muted="muted" autoplay playsinline
-                                        webkit-playsinline>
-                                        <source src="assets/mp4/pewpew.mp4" type="video/mp4" autoplay playsinline webkit-playsinline>
+                        </li>
+                        <hr class="my-4 bg-white opacity-20">
+                        <li>
+                            <button onclick="ToggleArchiveVisibility('#canary-archive')" class="tracking-widest">CANARY<sub class="font-jost text-xs">2019</sub></button>
+                            <div id="canary-archive" class="my-4 w-full hidden">
+                                <div class="flex flex-col shrink space-y-4 place-items-center mx-4 md:mx-40">
+                                    <video style="width: 66%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
+                                        <source src="assets/img/web/canary.mp4" type="video/mp4">
                                     </video>
                                 </div>
-                        
                             </div>
-                        </div>
-                    </li>
-                    <hr class="my-4 bg-white opacity-20">
-                    <li>
-                        <button onclick="ToggleArchiveVisibility('#roasted-archive')" class="tracking-widest">ROASTED<sub class="font-jost text-xs">2017</sub></button>
-                        <div id="roasted-archive" class="my-4 w-full hidden">
-                            <div class=" flex flex-col shrink space-y-4 place-items-center mx-40">
-                                <video style="width: 66%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
-                                    <source src="assets/mp4/roasted.mp4" type="video/mp4">
-                                </video>
-                                <div class="flex shrink space-x-4 my-4">
-                                    <img style="width: 50%;" src="assets/img/roasted/roasted-preview.png" loading="lazy">
-                                    <img style="width: 50%;" src="assets/img/roasted/roasted-lose.png" loading="lazy">
+                        </li>
+                        <hr class="my-4 bg-white opacity-20">
+                        <li>
+                            <button onclick="ToggleArchiveVisibility('#sunseeker-archive')" class="tracking-widest">SUNSEEKER<sub class="font-jost text-xs">2019</sub></button>
+                            <div id="sunseeker-archive" class="my-4 w-full hidden">
+                                <div class="flex flex-col shrink space-y-4 place-items-center mx-4 md:mx-40">
+                                    <video style="width: 66%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
+                                        <source src="assets/mp4/sunseeker.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="flex shrink space-x-4 my-4">
+                                        <img style="width: 50%;" src="assets/img/ss/flavorSunseeker.PNG" loading="lazy">
+                                        <img style="width: 50%;" src="assets/img/ss/flavorSunseeker2.PNG" loading="lazy">
+                                    </div>
                                 </div>
-
                             </div>
-                        </div>
-                    </li>
-                    <hr class="my-4 bg-white opacity-20">
-                </ul>
+                        </li>
+                        <hr class="my-4 bg-white opacity-20">
+                        <li>
+                            <button onclick="ToggleArchiveVisibility('#arboreal-archive')" class="tracking-widest">ARBOREAL<sub class="font-jost text-xs">2018</sub></button>
+                            <div id="arboreal-archive" class="my-4 w-full hidden">
+                                <div class="flex flex-col shrink space-y-4 place-items-center mx-4 md:mx-40">
+                                    <img style="width: 50%;" src="assets/img/ar/hololens.jpg">
+                                    <div class="flex shrink space-x-4 my-4">
+                                        <img style="width: 50%;" src="assets/img/ar/researchers.jpg" loading="lazy">
+                                        <img style="width: 50%;" src="assets/img/ar/wood.jpg" loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <hr class="my-4 bg-white opacity-20">
+                        <li>
+                            <button onclick="ToggleArchiveVisibility('#midnight-archive')" class="tracking-widest">MIDNIGHT CROWN<sub class="font-jost text-xs">2018</sub></button>
+                            <div id="midnight-archive" class="my-4 w-full hidden">
+                                <div class="flex flex-col shrink space-y-4 place-items-center mx-4 md:mx-40">
+                                    <video style="width: 66%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
+                                        <source src="assets/mp4/classified.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="flex shrink space-x-4 my-4">
+                                        <video style="width: 50%; height: auto;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
+                                            <source src="assets/mp4/zoomzoom.mp4" type="video/mp4" autoplay playsinline webkit-playsinline>
+                                        </video>
+                                        <video style="width: 50%; height: auto;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
+                                            <source src="assets/mp4/pewpew.mp4" type="video/mp4" autoplay playsinline webkit-playsinline>
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <hr class="my-4 bg-white opacity-20">
+                        <li>
+                            <button onclick="ToggleArchiveVisibility('#roasted-archive')" class="tracking-widest">ROASTED<sub class="font-jost text-xs">2017</sub></button>
+                            <div id="roasted-archive" class="my-4 w-full hidden">
+                                <div class="flex flex-col shrink space-y-4 place-items-center mx-4 md:mx-40">
+                                    <video style="width: 66%;" preload="none" loop="loop" muted="muted" autoplay playsinline webkit-playsinline>
+                                        <source src="assets/mp4/roasted.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="flex shrink space-x-4 my-4">
+                                        <img style="width: 50%;" src="assets/img/roasted/roasted-preview.png" loading="lazy">
+                                        <img style="width: 50%;" src="assets/img/roasted/roasted-lose.png" loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <hr class="my-4 bg-white opacity-20">
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
     <div id="skillmap-container" class="w-full h-full">
-        <div id="skillmap-inspector" class="font-jost align-middle sm:mx-44 lg:mx-56 py-14 w-100 h-100 grid grid-flow-col auto-cols max text-black">
-            <div class="text-left w-2/4">
-                <p class="lg:text-2xl mb-4">
-                    I'm Richard, a <b>game and software developer</b> based in <b>Vancouver, BC</b>. 
-                    <br>
-                    <br>
-                    I have 7 years of experience making <b>games, 3D Graphics and VFX Software</b>, 
-                    <br> 
-                    as well as a scrappy understanding
-                    of many other domains such as <b>full-stack web development and design.</b> 
-                    <br>
-                    <br>
-                    I have been blessed many times with responsibilities of <b>technical direction</b> and <b>leadership</b><br>
-                    by people who believed I was deserving of it. 
-                    <br>
-                    <br>
-                    <br>
-                    I hope that you enjoy my work, or better yet, that I may be a part of yours,
-                    <br>
-                    Richard
+        <div id="skillmap-inspector" class="font-jost align-middle sm:mx-4 lg:mx-56 py-14 w-full grid grid-flow-col auto-cols max text-black">
+            <div class="text-left w-full sm:w-2/4">
+                <p class="lg:text-2xl mb-4">I'm Richard, a <b>game and software developer</b> based in <b>Vancouver, BC</b>. 
+                <br>
+                <br>
+                I have 7 years of experience making <b>games, 3D Graphics and VFX Software</b>, 
+                <br> 
+                as well as a scrappy understanding
+                of many other domains such as <b>full-stack web development and design.</b> 
+                <br>
+                <br>
+                I have been blessed many times with responsibilities of <b>technical direction</b> and <b>leadership</b><br>
+                by people who believed I was deserving of it. 
+                <br>
+                <br>
+                <br>
+                I hope that you enjoy my work, or better yet, that I may be a part of yours,
+                <br>
+                Richard
                 </p>
                 <br>
             </div>
@@ -481,16 +439,36 @@
     </div>
     <div class="overflow-hidden whitespace-nowrap flex flex-row bg-neutral-900 text-white pt-5">
         <div class="scroll-motion font-monument">
-            <span class="mx-5 text-7xl">GET IN TOUCH!</span>
-            <span class="mx-5 text-7xl">SAY HELLO!</span>
-            <span class="mx-5 text-7xl">GET IN TOUCH!</span>
-            <span class="mx-5 text-7xl">SAY HELLO!</span>
-            <span class="mx-5 text-7xl">GET IN TOUCH!</span>
-            <span class="mx-5 text-7xl">SAY HELLO!</span>
-            <span class="mx-5 text-7xl">GET IN TOUCH!</span>
-            <span class="mx-5 text-7xl">SAY HELLO!</span>
-            <span class="mx-5 text-7xl">GET IN TOUCH!</span>
-            <span class="mx-5 text-7xl">SAY HELLO!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">GET IN TOUCH!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">SAY HELLO!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">GET IN TOUCH!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">SAY HELLO!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">GET IN TOUCH!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">SAY HELLO!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">GET IN TOUCH!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">SAY HELLO!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">GET IN TOUCH!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">SAY HELLO!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">GET IN TOUCH!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">SAY HELLO!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">GET IN TOUCH!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">SAY HELLO!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">GET IN TOUCH!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">SAY HELLO!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">GET IN TOUCH!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">SAY HELLO!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">GET IN TOUCH!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">SAY HELLO!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">GET IN TOUCH!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">SAY HELLO!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">GET IN TOUCH!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">SAY HELLO!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">GET IN TOUCH!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">SAY HELLO!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">GET IN TOUCH!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">SAY HELLO!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">GET IN TOUCH!</span>
+            <span class="mx-5 text-3xl sm:text-5xl lg:text-7xl">SAY HELLO!</span>
         </div>
     </div>
     <div id="contact-container" class="w-full h-full bg-neutral-900 text-white">
@@ -512,8 +490,8 @@
             </div>
         </div>
     </div>
-    <!-- <div id="cursorLerp">
-    </div> -->
+    <div id="cursorLerp">
+    </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

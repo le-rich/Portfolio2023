@@ -74,7 +74,7 @@ html, body {
 
 #cursorLerp{
     pointer-events: none;
-    position: fixed;
+    position: absolute;
     padding: 0.3rem;
     /* background-color: #a3f509; */
     background-color: white;
@@ -98,12 +98,11 @@ html, body {
 .scroll-motion-reverse{
     width: 100%;
     animation: scroll-motion 25s linear infinite;
-    animation-direction: reverse
-    ;
+    animation-direction: reverse;
 }
 
 @keyframes scroll-motion{
-    to {transform: translateX(-75%);}
+    to {transform: translateX(-100%);}
 }
 
 .pulsate-fwd {
