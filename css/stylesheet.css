@@ -19,6 +19,11 @@ html, body {
 
 .carousel-cell { height: 100% }
 
+.logo img {
+  filter: grayscale(100%) brightness(100);
+  height: auto;
+}
+
 .bg-header-color {
   backdrop-filter: blur(20px);
 }
