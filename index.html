@@ -19,18 +19,40 @@
 <body class="bg-clean-primary">
     <div id="swipe-up-revealer" class="bg-black fixed w-screen h-screen slide-out-top"></div>
     <canvas class="webgl -z-20"></canvas>
-    <div class="fixed w-full py-5 h-16 uppercase text-black bg-header-color">
-        <div id="top-navbar" class="transition-transform duration-300 relative flex flex-row items-center justify-between mx-4 sm:mx-14 text-xl sm:text-2xl font-bold z-[10000]">
+    <div class="fixed w-full py-4 h-16 uppercase text-black bg-yellow-400 z-50">
+        <div id="top-navbar" class="transition-transform duration-300 relative flex flex-row items-center justify-between mx-4 sm:mx-14 text-xl sm:text-2xl font-bold">
             <a href="https://richard-le.com">RL</a>
-            <ul class="flex flex-row">
+            <!-- <div class="hidden md:flex flex-row">
+                <ul class="flex flex-row">
+                    <li>
+                        <a href="#projects-container" class="px-2 sm:px-5"><span>PROJECTS</span></a>
+                    </li>
+                    <li>
+                        <a href="#skillmap-container" class="px-2 sm:px-5"><span>SKILLS</span></a>
+                    </li>
+                    <li>
+                        <a href="#contact-container" class="px-2 sm:px-5"><span>CONTACT</span></a>
+                    </li>
+                </ul>
+            </div> -->
+            <div class="flex items-center">
+                <button id="hamburger" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden absolute top-16 right-0 md:w-1/4 w-3/4 shadow-lg z-50">
+            <ul class="flex bg-yellow-400 flex-col text-right p-4">
                 <li>
-                    <a href="#projects-container" class="px-2 sm:px-5"><span>PROJECTS</span></a>
+                    <a href="#projects-container" class="block px-4 py-2"><span>PROJECTS</span></a>
                 </li>
                 <li>
-                    <a href="#skillmap-container" class="px-2 sm:px-5"><span>SKILLS</span></a>
+                    <a href="#skillmap-container" class="block px-4 py-2"><span>SKILLS</span></a>
                 </li>
                 <li>
-                    <a href="#contact-container" class="px-2 sm:px-5"><span>CONTACT</span></a>
+                    <a href="#contact-container" class="block px-4 py-2"><span>CONTACT</span></a>
                 </li>
             </ul>
         </div>
@@ -413,9 +435,9 @@
         </div>
     </div>
     <div id="skillmap-container" class="w-full h-full">
-        <div id="skillmap-inspector" class="font-jost align-middle sm:mx-4 lg:mx-56 py-14 w-full grid grid-flow-col auto-cols max text-black">
-            <div class="text-left w-full sm:w-2/4">
-                <p class="lg:text-2xl mb-4">I'm Richard, a <b>game and software developer</b> based in <b>Vancouver, BC</b>. 
+        <div id="skillmap-inspector" class="font-jost sm:mx-4 lg:mx-56 py-14 w-full text-black">
+            <div class="mx-4 text-left w-full sm:w-2/4">
+                <p class="lg:text-2xl mb-4 w-full">I'm Richard, a <b>game and software developer</b> based in <b>Vancouver, BC</b>. 
                 <br>
                 <br>
                 I have 7 years of experience making <b>games, 3D Graphics and VFX Software</b>, 

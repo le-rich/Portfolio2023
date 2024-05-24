@@ -196,15 +196,14 @@ var flkty5 = new Flickity( elem5, {
   freeScroll: true,
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  var elem = document.querySelector('.carousel5');
-  var flkty = new Flickity(elem, {
-      cellAlign: 'left',
-      contain: true,
-      pageDots: false,
-      wrapAround: false
-  });
-});
+document.getElementById('hamburger').onclick = function() {
+  var menu = document.getElementById('mobile-menu');
+  if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+  } else {
+      menu.classList.add('hidden');
+  }
+};
 
 // INIT
 window.addEventListener('load', (event) => {

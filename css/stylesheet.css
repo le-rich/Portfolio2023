@@ -210,8 +210,8 @@ html, body {
 
 ::-webkit-scrollbar-thumb
 {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #f9f7ef;
+	/* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3); */
+	background-color:  rgb(250 204 21);
 }
 
 /* THREE JS */
