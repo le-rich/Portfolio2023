@@ -17,36 +17,64 @@ const textureLoader = new THREE.TextureLoader();
 // Scene
 const scene = new THREE.Scene()
 /**
- * Loaders
+ * Loading Screen, Loaders and Load Management
  */
-const loader = new OBJLoader();
-let daggerGroup = new THREE.Group()
+let daggerGroup = null;
 let daggerMesh = null;
-loader.load(
-    '../assets/3d/daggerhighres-seamless.obj',
-    function (object){
-        object.rotation.x = Math.PI / 2
-        object.children[0].scale.set(12,12,12)
-        object.position.set(0,0, -0.5)
+let assetsLoaded = 0;
 
-        daggerMesh = object.children[0];
-        daggerMesh.material = CleanCutMat
-        daggerGroup = object
-        scene.add(object);
-    },
-    // called when loading is in progresses
-	function ( xhr ) {
+document.addEventListener('DOMContentLoaded', () => {
+    let totalAssets = 0;
 
-		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+    const updateLoadingProgress = () => {
+        assetsLoaded++;
 
-	},
-	// called when loading has errors
-	function ( error ) {
+        if (assetsLoaded === totalAssets) {
+            $("#loading-text").fadeOut();
+            $("#loading-bar").fadeOut();
+            setTimeout(slideOutLoader, 1000);
+        }
+    };
 
-		console.log( 'Error Loading Dagger Mesh Occurred' );
+    const manager = new THREE.LoadingManager();
+    manager.onStart = function (url, itemsLoaded, itemsTotal) {
+        totalAssets += itemsTotal;
+    };
+    manager.onProgress = function (url, itemsLoaded, itemsTotal) {
 
-	}
-)
+    };
+    manager.onLoad = function () {
+        updateLoadingProgress();
+    };
+
+    const loader = new OBJLoader(manager);
+    loader.load(
+        '../assets/3d/daggerhighres-seamless.obj',
+        function (object){
+            object.rotation.x = Math.PI / 2;
+            object.children[0].scale.set(12,12,12);
+            object.position.set(0,0, -0.5);
+
+            daggerMesh = object.children[0];
+            daggerMesh.material = CleanCutMat;
+            daggerGroup = object;
+            scene.add(object);
+        },
+        function (xhr) {
+            console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+            const percentage = Math.round((xhr.loaded / xhr.total) * 100);
+            document.getElementById('loading-percentage').textContent = `${percentage}%`;
+            document.getElementById('loading-bar-fill').style.width = `${percentage}%`;
+        },
+        function (error) {
+            console.log('Error Loading Dagger Mesh Occurred');
+        }
+    );
+});
+
+function slideOutLoader() {
+    document.getElementById('loading-screen').classList.add('slide-out-top');
+}
 
 // Materials for switching
 const CleanCutMat = new THREE.ShaderMaterial({
@@ -150,9 +178,10 @@ const tick = () =>
 
     // Render
     renderer.render(scene, camera)
-    daggerGroup.rotation.z = elapsedTime;
-    daggerGroup.position.y = (Math.sin(elapsedTime) / 4) + 0.45
-
+    if (daggerGroup != null){
+        daggerGroup.rotation.z = elapsedTime;
+        daggerGroup.position.y = (Math.sin(elapsedTime) / 4) + 0.45
+    }
 
     // Update material
     CleanCutMat.uniforms.uTime.value = elapsedTime

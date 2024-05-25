@@ -15,26 +15,35 @@
     <link rel="stylesheet" href="css/stylesheet.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Richard Le - Software Developer</title>
+    <style id="dynamic-scrollbar-styles">
+        /* Initial Scrollbar Styles */
+        ::-webkit-scrollbar-track {
+            background-color: black;
+            color: transparent;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+            background-color: black;
+            color: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgb(250 204 21);
+        }
+    </style>
 </head>
 <body class="bg-clean-primary">
-    <div id="swipe-up-revealer" class="bg-black fixed w-screen h-screen slide-out-top"></div>
+    <div id="loading-screen" class="fixed inset-0 bg-black flex flex-col justify-center items-center z-[9999]">
+        <h1 id="loading-text" class="text-white text-xl tracking-widest">Loading... <span id="loading-percentage">0%</span></h1>
+        <div id="loading-bar" class="w-4/5 h-1 bg-gray-700 overflow-hidden mt-5">
+            <div id="loading-bar-fill" class="h-full bg-yellow-400" style="width: 0;"></div>
+        </div>
+    </div>
     <canvas class="webgl -z-20"></canvas>
     <div class="fixed w-full py-4 h-16 uppercase text-black bg-yellow-400 z-50">
         <div id="top-navbar" class="transition-transform duration-300 relative flex flex-row items-center justify-between mx-4 sm:mx-14 text-xl sm:text-2xl font-bold">
             <a href="https://richard-le.com">RL</a>
-            <!-- <div class="hidden md:flex flex-row">
-                <ul class="flex flex-row">
-                    <li>
-                        <a href="#projects-container" class="px-2 sm:px-5"><span>PROJECTS</span></a>
-                    </li>
-                    <li>
-                        <a href="#skillmap-container" class="px-2 sm:px-5"><span>SKILLS</span></a>
-                    </li>
-                    <li>
-                        <a href="#contact-container" class="px-2 sm:px-5"><span>CONTACT</span></a>
-                    </li>
-                </ul>
-            </div> -->
             <div class="flex items-center">
                 <button id="hamburger" class="focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

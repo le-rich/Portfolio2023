@@ -30,22 +30,6 @@ function ToggleArchiveVisibility (projectDOMId){
 }
 window.ToggleArchiveVisibility = ToggleArchiveVisibility
 
-// NAV HEADER ELEMENTS HIDE ON SCROLL
-var prevScrollpos = window.pageYOffset;
-
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    // $("#top-navbar").css("top", "0px");
-    // $("#color-switcher").css("right", "0");
-  } 
-  else {
-    // $("#top-navbar").css("top", "-500px");
-    // $("#color-switcher").css("right", "-500px");
-  }
-  prevScrollpos = currentScrollPos;
-}
-
 // COLOR CHANGE SELECTORS
 var prevColorTheme = {
   accentColor : "",
@@ -68,6 +52,7 @@ function ColorModeCleanCut(){
   SetCleanCutColors();
   ActivateMeshCleanCut();
   SwapColors();
+  SetScrollbarColors("rgb(0 0 0)", "rgb(250 204 21)");
 }
 window.ColorModeCleanCut = ColorModeCleanCut
 
@@ -76,6 +61,7 @@ function ColorModeCyberWarfare(){
   SetCyberWarfareColors();
   ActivateMeshCyberWarfare();
   SwapColors();
+  SetScrollbarColors("rgb(0 0 0)", "rgb(192 38 211)");
 }
 window.ColorModeCyberWarfare = ColorModeCyberWarfare
 
@@ -85,6 +71,7 @@ function ColorModeLuxe(){
   SetLuxeColors();
   ActivateMeshLuxe();
   SwapColors();
+  SetScrollbarColors("rgb(0 0 0)", "rgb(244 63 94)");
 }
 window.ColorModeLuxe = ColorModeLuxe
 
@@ -134,8 +121,23 @@ function SwapColors(){
   $("." + prevColorTheme.accentColor).removeClass(prevColorTheme.accentColor).addClass(currColorTheme.accentColor)
 }
 
+function SetScrollbarColors(trackColor, thumbColor) {
+  const styleSheet = document.getElementById('dynamic-scrollbar-styles').sheet;
+  const rules = styleSheet.cssRules || styleSheet.rules;
 
-
+  for (let i = 0; i < rules.length; i++) {
+      const rule = rules[i];
+      if (rule.selectorText === '::-webkit-scrollbar-track') {
+          rule.style.backgroundColor = trackColor;
+      }
+      if (rule.selectorText === '::-webkit-scrollbar') {
+          rule.style.backgroundColor = trackColor;
+      }
+      if (rule.selectorText === '::-webkit-scrollbar-thumb') {
+          rule.style.backgroundColor = thumbColor;
+      }
+  }
+}
 
 
 // PROJECT CAROUSEL FLICKITY
